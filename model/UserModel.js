@@ -17,7 +17,8 @@ const UserSchema = new mongoose.Schema({
         type:String,
         minlength:[10,"شماره صحیح نمیباشد"],
         maxlength:[12,"شماره صحیح نمیباشد"],
-        required:[true,"شماره الزامی میباشد"]
+        required:[true,"شماره الزامی میباشد"],
+        unique:true
     },
     registerDate:{
         type:Date,
@@ -25,6 +26,7 @@ const UserSchema = new mongoose.Schema({
     },
     lastPayDate:{
         type:Date,
+        default:Date.now
     },
     isAdmin:{
         type:Boolean,
@@ -38,6 +40,10 @@ const UserSchema = new mongoose.Schema({
         type:String,
         minlength:[2,"نام کاربری بسیار کوتاه میباشد"],
         maxlength:[50,"نام کاربری بسیار بلند میباشد"]
+    },
+    password:{
+        type:String,
+        required:true,
     }
 
 })

@@ -13,6 +13,10 @@ const app = express()
 app.use(express.json())
 
 
+// routes
+app.use('/api/v1',require('./routes/UserRoute'))
+
+
 //config other library
 winston.add(new winston.transports.File({filename:"log.log"}))
 winston.add(

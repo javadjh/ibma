@@ -6,10 +6,10 @@ const _ = require('lodash')
 module.exports.getUsers= async (req,res)=>{
     const pageId = parseInt(req.query.pageId?req.query.pageId:1)
     const eachPerPage = parseInt(req.query.eachPerPage?req.query.eachPerPage:12)
-    const users = await UserModel.find({
+    let users = await UserModel.find({
         name:new RegExp(req.query.searchValue)
     }).limit(eachPerPage).skip((pageId-1)*eachPerPage)
-    const total = await UserModel.find({
+    let total = await UserModel.find({
         name:new RegExp(req.query.searchValue)
     }).count()
     res.send({

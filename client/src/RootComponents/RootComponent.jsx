@@ -2,6 +2,7 @@ import React from 'react'
 import {Route, Switch,withRouter} from "react-router";
 import LoginComponent from "../EntryComponent/LoginComponent";
 import AdminLayout from "./AdminLayout";
+import UsersRoot from "../components/users/UsersRoot";
 
 const RootComponent = ({history})=>{
     return(
@@ -14,7 +15,7 @@ const RootComponent = ({history})=>{
                     <div className="container-fluid" style={{marginTop:"60px"}}>
                         <Switch>
                             <Route path={"/adminlogin"} component={LoginComponent} exact/>
-                            {/*<Route path={"/admin"} component={LoginComponent} exact/>*/}
+                            <Route path={"/users"} component={UsersRoot} exact/>
                         </Switch>
                     </div>
                 </div>

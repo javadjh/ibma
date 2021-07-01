@@ -22,23 +22,11 @@ const LoginComponent = ({history})=>{
         <Fragment>
             <div className="main-content bg-gradient-primary" style={{width:"100%",height:"100vh"}}>
 
-                <div className="header bg-gradient-primary py-6">
-                    <div className="container">
-                        <div className="header-body text-center">
-                            <div className="row justify-content-center mb-5">
-                                <div className="col-lg-5 col-md-6 mb-4">
-                                    <h1 className="text-white">ورود به حساب کاربری</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
-                <div className="container mt--8 pb-5 bg-gradient-primary" >
+                <div className="container pb-5 bg-gradient-primary" >
                     <div className="row justify-content-center">
                         <div className="col-lg-5 col-md-7">
                             <div className="card bg-secondary shadow border-0">
-
                                 <div className="card-body px-lg-5 py-lg-5">
                                     <form role="form">
                                         <div className="form-group mb-3">

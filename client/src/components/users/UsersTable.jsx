@@ -1,7 +1,7 @@
 import React , {Fragment} from 'react'
 import PagingComponent from "../../utility/PagingComponent";
 
-const UsersTable = ({users,handelPagingDrover})=>{
+const UsersTable = ({users,handelPagingDrover,handleDeleteUser,handelEditUser})=>{
     console.log(users)
     return(
         <Fragment>
@@ -41,7 +41,7 @@ const UsersTable = ({users,handelPagingDrover})=>{
                                                 {user.homeNumber}
                                             </td>
                                             <td>
-                                                {user.lastPayDate}
+                                                ({user.dayCount}) - {user.lastPayDate}
                                             </td>
 
                                             <td className="text-right">
@@ -52,14 +52,12 @@ const UsersTable = ({users,handelPagingDrover})=>{
                                                     </a>
                                                     <div
                                                         className="dropdown-menu dropdown-menu-right text-right dropdown-menu-arrow">
-                                                        <p
-                                                            key="open"
-                                                            onClick={(e)=> {
-                                                                console.log("click")
-                                                            }}
-                                                            className="dropdown-item" >ویرایش</p>
-                                                        <a className="dropdown-item"  >حذف</a>
-                                                        <a className="dropdown-item" href="#">نمایش</a>
+                                                        <a style={{color:"green"}} className="dropdown-item"  onClick={()=>{
+                                                            handelEditUser(user)
+                                                        }}>ویرایش</a>
+                                                        <a style={{color:"red"}} onClick={()=>{
+                                                            handleDeleteUser(user)
+                                                        }} className="dropdown-item"  >حذف</a>
                                                     </div>
                                                 </div>
                                             </td>

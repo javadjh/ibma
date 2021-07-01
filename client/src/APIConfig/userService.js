@@ -9,3 +9,14 @@ export const usersService=(filter)=>{
         params:filter
     })
 }
+export const upsertUserService=(user)=>{
+    return axiosConfig.post(`${config.baseUrl}${config.upsertUser}`,user)
+}
+export const deleteUserService=(id)=>{
+    console.log("scsdcsdcsdsd*/************")
+    return axiosConfig.delete(`${config.baseUrl}${config.deleteUser}${id}`,)
+}
+
+export const singleUserService=(id)=>{
+    return axiosConfig.get(`${config.baseUrl}${config.deleteUser}${id}`,)
+}

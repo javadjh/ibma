@@ -48,6 +48,7 @@ app.use(function (req, res, next) {
 
 // routes
 app.use('/api/v1',require('./routes/UserRoute'))
+app.use('/api/v1',require('./routes/LetterRoute'))
 
 
 //config other library

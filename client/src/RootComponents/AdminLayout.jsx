@@ -10,7 +10,7 @@ const AdminLayout=()=>{
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <a className="navbar-brand pt-0" href="./index.html">
-                        <img src="./assets/img/brand/blue.png" className="navbar-brand-img" alt="..."/>
+                        <img src="./assets/img/brand/ibmalogo.jpg" className="navbar-brand-img" alt="..."/>
                     </a>
                     <ul className="nav align-items-center d-md-none">
                         <li className="nav-item dropdown">
@@ -97,7 +97,7 @@ const AdminLayout=()=>{
                                 <NavLink className="nav-link" to={"/users"}>
                                     <i className="ni ni-tv-2 text-primary"></i> کاربران
                                 </NavLink>
-                                <NavLink className="nav-link" to={"/drovers"}>
+                                {/*<NavLink className="nav-link" to={"/drovers"}>
                                     <i className="ni ni-tv-2 text-primary"></i>چوبداران
                                 </NavLink>
                                 <NavLink className="nav-link" to={"/reportage"}>
@@ -105,10 +105,10 @@ const AdminLayout=()=>{
                                 </NavLink>
                                 <NavLink className="nav-link" to={"/contractors"}>
                                     <i className="ni ni-tv-2 text-primary"></i>پیمانکاران
-                                </NavLink>
+                                </NavLink>*/}
                             </li>
                         </ul>
-                        <hr className="my-3"/>
+                        {/*<hr className="my-3"/>
                         <h6 className="navbar-heading text-muted">مستندات قالب را ببینید:</h6>
                         <ul className="navbar-nav mb-md-3">
                             <li className="nav-item">
@@ -116,7 +116,7 @@ const AdminLayout=()=>{
                                     <i className="ni ni-single-copy-04"></i> مستندات
                                 </a>
                             </li>
-                        </ul>
+                        </ul>*/}
                     </div>
                 </div>
             </nav>

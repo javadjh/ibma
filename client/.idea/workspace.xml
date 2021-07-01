@@ -2,18 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b3316f0-a698-4abe-9b03-8e34b2391882" name="Default Changelist" comment="add login and base of admin layout">
-      <change afterPath="$PROJECT_DIR$/src/Reducers/UsersReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/users/UsersRoot.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/users/UsersTable.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utility/PagingComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/brand/ibmalogo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Reducers/SingleUserReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RootComponents/TopNavBar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/users/UpsertUserComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/utilityComponent/SearchingComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../utility/dateUtility.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/APIConfig/axiosConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/axiosConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/APIConfig/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/APIConfig/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/userService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Actions/UserAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/UserAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EntryComponent/LoginComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/EntryComponent/LoginComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RootComponents/AdminLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/AdminLayout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/UsersRoot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/UsersRoot.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/UsersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/UsersTable.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../handler/user/query/userQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/user/query/userQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +39,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/APIConfig" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/img/brand" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -43,9 +49,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\ibma\client\public\assets\img\brand" />
+      <recent name="D:\project\ibma\client\src\components\utilityComponent" />
+      <recent name="D:\project\ibma\client\src\RootComponents" />
       <recent name="D:\project\ibma\client\src\APIConfig" />
       <recent name="D:\project\ibma\client\src\utility" />
-      <recent name="D:\project\ibma\client\public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -72,7 +80,9 @@
       <option name="presentableId" value="Default" />
       <updated>1624960746162</updated>
       <workItem from="1624960747196" duration="12950000" />
-      <workItem from="1624993128020" duration="7840000" />
+      <workItem from="1624993128020" duration="7914000" />
+      <workItem from="1625035217722" duration="13163000" />
+      <workItem from="1625062377932" duration="7146000" />
     </task>
     <task id="LOCAL-00001" summary="init client">
       <created>1624970583660</created>
@@ -88,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624993609090</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add login and base of admin layout">
+      <created>1625001748929</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1625001748929</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

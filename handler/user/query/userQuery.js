@@ -3,21 +3,46 @@ const bcrypt = require('bcrypt')
 const {loginUserValidator} = require("../../../validators/userValidator");
 const jwtGenerator = require("../../../utility/jwtGenerator");
 const _ = require('lodash')
+const {convertToShamsi,daysCalculate} = require('../../../utility/dateUtility')
 module.exports.getUsers= async (req,res)=>{
-    const pageId = parseInt(req.query.pageId?req.query.pageId:1)
-    const eachPerPage = parseInt(req.query.eachPerPage?req.query.eachPerPage:12)
-    let users = await UserModel.find({
-        name:new RegExp(req.query.searchValue)
-    }).limit(eachPerPage).skip((pageId-1)*eachPerPage)
-    let total = await UserModel.find({
-        name:new RegExp(req.query.searchValue)
-    }).count()
-    res.send({
-        pageId,
-        eachPerPage,
-        total,
-        users
-    })
+    try {
+        const pageId = parseInt(req.query.pageId?req.query.pageId:1)
+        const eachPerPage = parseInt(req.query.eachPerPage?req.query.eachPerPage:12)
+        const homeNumberInt = req.query.homeNumberSearch
+        let filter={}
+        if(homeNumberInt===0 ||homeNumberInt===undefined ||homeNumberInt==="" ){
+            console.log("first")
+            filter={userName:new RegExp(req.query.userNameSearch)}
+        }else {
+            console.log("second")
+            filter = {
+                userName: new RegExp(req.query.userNameSearch),
+                homeNumber: parseInt(homeNumberInt)
+            }
+        }
+        console.log(homeNumberInt)
+        let users = await UserModel.find(filter).limit(eachPerPage).skip((pageId-1)*eachPerPage).select("-password").lean()
+
+        let total = await UserModel.find(filter).count()
+
+        try {
+            for (let i = 0 ; i<users.length ; i++){
+                users[i].dayCount = daysCalculate(new Date,users[i].lastPayDate)
+                users[i].lastPayDate = convertToShamsi(users[i].lastPayDate)
+                console.log(convertToShamsi(new Date))
+            }
+        }catch (err){
+            console.log(err)
+        }
+        res.send({
+            pageId,
+            eachPerPage,
+            total,
+            users
+        })
+    }catch (err){
+        console.log(err)
+    }
 
 }
 module.exports.login= async (req,res)=>{
@@ -41,4 +66,9 @@ module.exports.login= async (req,res)=>{
         console.log(err)
     }
 
+}
+
+module.exports.autoComplete = async (req,res)=>{
+    const allUsers = await UserModel.find().select("_id userName")
+    res.send(allUsers)
 }

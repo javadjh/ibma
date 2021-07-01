@@ -3,6 +3,7 @@ import {Route, Switch,withRouter} from "react-router";
 import LoginComponent from "../EntryComponent/LoginComponent";
 import AdminLayout from "./AdminLayout";
 import UsersRoot from "../components/users/UsersRoot";
+import UpsertUserComponent from "../components/users/UpsertUserComponent";
 
 const RootComponent = ({history})=>{
     return(
@@ -16,6 +17,8 @@ const RootComponent = ({history})=>{
                         <Switch>
                             <Route path={"/adminlogin"} component={LoginComponent} exact/>
                             <Route path={"/users"} component={UsersRoot} exact/>
+                            <Route path={"/upsert/user"} component={UpsertUserComponent} exact/>
+                            <Route path={"/upsert/user/:id"} component={UpsertUserComponent} exact/>
                         </Switch>
                     </div>
                 </div>

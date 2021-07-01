@@ -1,5 +1,7 @@
 {
   "baseUrl": "http://localhost:1000/api/v1",
   "login": "/login",
-  "users": "/users"
+  "users": "/users",
+  "upsertUser": "/upsert/user",
+  "deleteUser": "/user/"
 }

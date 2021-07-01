@@ -14,6 +14,10 @@ const PoolSchema = new mongoose.Schema({
     turnNumber:{
         type:Number,
         required:true
+    },
+    turnDate:{
+        type:Date,
+        required:true
     }
 })
 const PoolModel = mongoose.model("pool",PoolSchema)

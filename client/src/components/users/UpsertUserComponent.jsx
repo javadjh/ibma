@@ -1,7 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react'
 import validator from 'simple-react-validator'
 import {useDispatch, useSelector} from "react-redux";
-import {clearUserSingle, getUserSingle, upsertUser} from "../../Actions/UserAction";
+import {upsertUser} from "../../Actions/UsersAction";
+import {clearUserSingle, getUserSingle} from "../../Actions/SingleUserAction";
 
 const UpsertUserComponent = ({history,match})=>{
     const userId = match.params.id

@@ -4,6 +4,8 @@ import LoginComponent from "../EntryComponent/LoginComponent";
 import AdminLayout from "./AdminLayout";
 import UsersRoot from "../components/users/UsersRoot";
 import UpsertUserComponent from "../components/users/UpsertUserComponent";
+import LettersRoot from "../components/letters/LettersRoot";
+import InsertLetter from "../components/letters/InsertLetter";
 
 const RootComponent = ({history})=>{
     return(
@@ -19,6 +21,8 @@ const RootComponent = ({history})=>{
                             <Route path={"/users"} component={UsersRoot} exact/>
                             <Route path={"/upsert/user"} component={UpsertUserComponent} exact/>
                             <Route path={"/upsert/user/:id"} component={UpsertUserComponent} exact/>
+                            <Route path={"/letters"} component={LettersRoot} exact/>
+                            <Route path={"/insert/letter"} component={InsertLetter} exact/>
                         </Switch>
                     </div>
                 </div>

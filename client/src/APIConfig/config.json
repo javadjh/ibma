@@ -3,5 +3,7 @@
   "login": "/login",
   "users": "/users",
   "upsertUser": "/upsert/user",
-  "deleteUser": "/user/"
+  "deleteUser": "/user/",
+  "letters": "/letters",
+  "insertLetter": "/insert/letter"
 }

@@ -1,8 +1,8 @@
 import React, {Fragment, useEffect, useState} from 'react'
 import UsersTable from "./UsersTable";
 import {useDispatch, useSelector} from "react-redux";
-import {deleteUser, getUsers} from "../../Actions/UserAction";
 import SearchingComponent from "../utilityComponent/SearchingComponent";
+import {deleteUser, getUsers} from "../../Actions/UsersAction";
 const UsersRoot = ({history})=>{
     const [isDataLoaded , setIsDataLoaded] = useState(false)
     const [pageId , setPageId] = useState(1)
@@ -24,7 +24,7 @@ const UsersRoot = ({history})=>{
         }))
         setIsDataLoaded(true)
     }
-    const handelPagingDrover = (pageId)=>{
+    const handelPaging = (pageId)=>{
         setPageId(pageId)
     }
     const handleDeleteUser = async (user)=>{
@@ -50,7 +50,7 @@ const UsersRoot = ({history})=>{
                                 <button onClick={(e)=>history.push('/upsert/user')} type="button" className="btn btn-primary my-4">افزودن کاربر جدید به سامانه</button>
                             </div>
                             {isDataLoaded?(
-                                <UsersTable users={usersState} handelPagingDrover={handelPagingDrover} handleDeleteUser={handleDeleteUser} handelEditUser={handelEditUser} />
+                                <UsersTable users={usersState} handelPaging={handelPaging} handleDeleteUser={handleDeleteUser} handelEditUser={handelEditUser} />
                             ):null}
 
                         </div>

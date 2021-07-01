@@ -1,7 +1,7 @@
 import React , {Fragment} from 'react'
 import PagingComponent from "../../utility/PagingComponent";
 
-const UsersTable = ({users,handelPagingDrover,handleDeleteUser,handelEditUser})=>{
+const UsersTable = ({users,handelPaging,handleDeleteUser,handelEditUser})=>{
     console.log(users)
     return(
         <Fragment>
@@ -70,7 +70,7 @@ const UsersTable = ({users,handelPagingDrover,handleDeleteUser,handelEditUser})=
             <PagingComponent pageId={users.pageId}
                              total={users.total}
                              eachPerPage={users.eachPerPage}
-                             handelPagingDrover={handelPagingDrover}/>
+                             handelPaging={handelPaging}/>
         </Fragment>
     )
 }

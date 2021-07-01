@@ -97,9 +97,10 @@ const AdminLayout=()=>{
                                 <NavLink className="nav-link" to={"/users"}>
                                     <i className="ni ni-tv-2 text-primary"></i> کاربران
                                 </NavLink>
-                                {/*<NavLink className="nav-link" to={"/drovers"}>
-                                    <i className="ni ni-tv-2 text-primary"></i>چوبداران
+                                <NavLink className="nav-link" to={"/letters"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>نامه ها
                                 </NavLink>
+                                {/*
                                 <NavLink className="nav-link" to={"/reportage"}>
                                     <i className="ni ni-tv-2 text-primary"></i>گزارش گیری
                                 </NavLink>

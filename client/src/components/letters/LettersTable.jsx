@@ -29,8 +29,21 @@ const LetterTable=({letters,handelPaging})=>{
                                     </div>
                                 </div>
                             </th>
-                            <td>
-                                {letter.message}
+                            <td >
+                                <p style={{
+                                    width: 200,
+                                    marginTop:13,
+                                    fontSize:13,
+                                    justifyContent:"center",
+                                    textAlign:"right",
+                                    alignItems:"right",
+                                    alignSelf:"center",
+                                    whiteSpace: "nowrap",
+                                    overflow: "hidden",
+                                    textOverflow: "ellipsis"
+                                }}>
+                                    {letter.message}
+                                </p>
                             </td>
                             <td>
                                 {letter.createDate}

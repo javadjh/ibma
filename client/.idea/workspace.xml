@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b3316f0-a698-4abe-9b03-8e34b2391882" name="Default Changelist" comment="add login and base of admin layout">
-      <change afterPath="$PROJECT_DIR$/src/APIConfig/letterService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Actions/LettersAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Actions/SingleUserAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Actions/UsersAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Reducers/LettersReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/letters/InsertLetter.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/letters/LettersRoot.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/letters/LettersTable.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/utilityComponent/SearchingSimpleInput.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/APIConfig/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actions/UserAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/UserAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RootComponents/AdminLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/AdminLayout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/APIConfig/letterService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/letterService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/users/UpsertUserComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/UpsertUserComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/letters/InsertLetter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letters/InsertLetter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/letters/LettersRoot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letters/LettersRoot.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/letters/LettersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/letters/LettersTable.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/UsersRoot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/UsersRoot.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/users/UsersTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/users/UsersTable.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utility/PagingComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/PagingComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/letter/query/letterQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/letter/query/letterQuery.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +75,7 @@
       <workItem from="1624993128020" duration="7914000" />
       <workItem from="1625035217722" duration="13163000" />
       <workItem from="1625062377932" duration="7146000" />
-      <workItem from="1625127513070" duration="9472000" />
+      <workItem from="1625127513070" duration="14752000" />
     </task>
     <task id="LOCAL-00001" summary="init client">
       <created>1624970583660</created>

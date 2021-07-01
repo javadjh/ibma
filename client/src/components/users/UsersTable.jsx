@@ -1,7 +1,7 @@
 import React , {Fragment} from 'react'
 import PagingComponent from "../../utility/PagingComponent";
 
-const UsersTable = ({users,handelPaging,handleDeleteUser,handelEditUser})=>{
+const UsersTable = ({users,handelPaging,handleDeleteUser,handelEditUser,history,handleSendLetterToUser})=>{
     console.log(users)
     return(
         <Fragment>
@@ -52,9 +52,12 @@ const UsersTable = ({users,handelPaging,handleDeleteUser,handelEditUser})=>{
                                                     </a>
                                                     <div
                                                         className="dropdown-menu dropdown-menu-right text-right dropdown-menu-arrow">
-                                                        <a style={{color:"green"}} className="dropdown-item"  onClick={()=>{
+                                                        <a style={{color:"royalblue"}} className="dropdown-item"  onClick={()=>{
                                                             handelEditUser(user)
                                                         }}>ویرایش</a>
+                                                        <a style={{color:"green"}} className="dropdown-item"  onClick={()=>{
+                                                            handleSendLetterToUser(user)
+                                                        }}>ارسال نامه خصوصی</a>
                                                         <a style={{color:"red"}} onClick={()=>{
                                                             handleDeleteUser(user)
                                                         }} className="dropdown-item"  >حذف</a>

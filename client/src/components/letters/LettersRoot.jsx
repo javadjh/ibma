@@ -4,6 +4,7 @@ import UsersTable from "../users/UsersTable";
 import {useDispatch, useSelector} from "react-redux";
 import {getLetters} from "../../Actions/LettersAction";
 import LettersTable from "./LettersTable";
+import SearchingSimpleInput from "../utilityComponent/SearchingSimpleInput";
 
 const LettersRoot =({history})=>{
     const [pageId , setPageId] = useState(1)
@@ -11,27 +12,29 @@ const LettersRoot =({history})=>{
     const [isDataLoaded,setIsDataLoaded] = useState(false)
     const dispatch = useDispatch()
     const letters = useSelector(state => state.letters)
-    console.log(letters)
     useEffect(()=>{
+        console.log("sdcfsdc")
         getLettersData()
-    },[pageId])
+    },[pageId,searchValue])
     const getLettersData = async ()=>{
-        const filter = {
+        await dispatch(getLetters({
             pageId,
             eachPerPage: 4,
             searchValue
-        }
-        await dispatch(getLetters(filter))
+        }))
         setIsDataLoaded(true)
 
     }
     const handelPaging = (pageId)=>{
         setPageId(pageId)
     }
+    const onSearching = (s1)=>{
+        setSearchValue(s1)
+    }
     return(
         <Fragment>
             <div className="container-fluid mt--8 text-right">
-                <SearchingComponent />
+                <SearchingSimpleInput onSearching={onSearching} />
                 <div className="row">
                     <div className="col">
                         <div className="card shadow">

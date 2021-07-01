@@ -3,7 +3,13 @@ import validator from "simple-react-validator";
 import {useDispatch} from "react-redux";
 import {addLetter} from "../../Actions/LettersAction";
 
-const InsertLetter = ({history})=>{
+const InsertLetter = ({history,match})=>{
+    const [title,setTitle] = useState('')
+    const [message,setMessage] = useState('')
+    const [,setValidatorValid] = useState(null)
+    const userId = match.params.id
+    console.log(userId)
+    const [letterTarget,setLetterTarget] = useState(userId?"user":"all")
     const dispatch = useDispatch()
     const formValidator = useRef(new validator({
         messages:{
@@ -13,16 +19,24 @@ const InsertLetter = ({history})=>{
         },
         element: (e)=>(<div style={{color:"red" , marginTop:"10px"}}>{e}</div>)
     }))
-    const [title,setTitle] = useState('')
-    const [message,setMessage] = useState('')
-    const [,setValidatorValid] = useState(null)
 
     const handleAddLetter = async ()=>{
         if(formValidator.current.allValid()){
-            const data={
-                title,
-                message,
-                target:"all"
+            let data = {}
+            if(userId!==undefined){
+                setLetterTarget("user")
+                data={
+                    title,
+                    message,
+                    target:letterTarget,
+                    userId
+                }
+            }else{
+                data={
+                    title,
+                    message,
+                    target:letterTarget
+                }
             }
             await dispatch(addLetter(data))
             history.goBack()
@@ -40,7 +54,9 @@ const InsertLetter = ({history})=>{
                             <h3 className="mb-0">ثبت پیام</h3>
                         </div>
                         <div className="col-4 text-left">
-                            <a onClick={handleAddLetter} style={{color:"white"}} className="btn btn-sm btn-primary p-3">ثبت پیام</a>
+                            <a onClick={()=>{
+                                handleAddLetter()
+                            }} style={{color:"white"}} className="btn btn-sm btn-primary p-3">ثبت پیام</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +100,9 @@ const InsertLetter = ({history})=>{
                         <div className="col-8">
                         </div>
                         <div className="col-4 text-left">
-                            <a  onClick={handleAddLetter}  style={{color:"white"}} className="btn btn-sm btn-primary p-3">ثبت پیام</a>
+                            <a  onClick={()=>{
+                                handleAddLetter()
+                            }}  style={{color:"white"}} className="btn btn-sm btn-primary p-3">ثبت پیام</a>
                         </div>
                     </div>
                 </div>

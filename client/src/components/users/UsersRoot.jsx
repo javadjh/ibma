@@ -34,6 +34,9 @@ const UsersRoot = ({history})=>{
     const handelEditUser = (user)=>{
         history.push(`/upsert/user/${user._id}`)
     }
+    const handleSendLetterToUser = (user)=>{
+        history.push(`/insert/letter/${user._id}`)
+    }
     const onSearching = (s1,s2)=>{
         setUserNameSearch(s1)
         setHomeNumberSearch(s2)
@@ -50,7 +53,7 @@ const UsersRoot = ({history})=>{
                                 <button onClick={(e)=>history.push('/upsert/user')} type="button" className="btn btn-primary my-4">افزودن کاربر جدید به سامانه</button>
                             </div>
                             {isDataLoaded?(
-                                <UsersTable users={usersState} handelPaging={handelPaging} handleDeleteUser={handleDeleteUser} handelEditUser={handelEditUser} />
+                                <UsersTable handleSendLetterToUser={handleSendLetterToUser} users={usersState} handelPaging={handelPaging} handleDeleteUser={handleDeleteUser} handelEditUser={handelEditUser} />
                             ):null}
 
                         </div>

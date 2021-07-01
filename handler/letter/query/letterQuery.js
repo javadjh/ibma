@@ -8,7 +8,8 @@ module.exports.getLetter = async (req,res)=>{
 
     let letters = await LetterModel.find({
         title:new RegExp(searchValue)
-    }).populate("userId","-password -registerDate -lastPayDate -phoneNumber -isAdmin -__v").limit(ePP).skip((pId-1)*ePP).select("-__v").lean()
+    }).populate("userId","-password -registerDate -lastPayDate -phoneNumber -isAdmin -__v").limit(ePP).skip((pId-1)*ePP).select("-__v")
+        .sort({ createDate : -1}).lean()
 
     const total = await LetterModel.find({
         title:new RegExp(searchValue)

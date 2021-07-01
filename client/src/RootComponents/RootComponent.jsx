@@ -18,11 +18,14 @@ const RootComponent = ({history})=>{
                     <div className="container-fluid" style={{marginTop:"60px"}}>
                         <Switch>
                             <Route path={"/adminlogin"} component={LoginComponent} exact/>
+
                             <Route path={"/users"} component={UsersRoot} exact/>
                             <Route path={"/upsert/user"} component={UpsertUserComponent} exact/>
                             <Route path={"/upsert/user/:id"} component={UpsertUserComponent} exact/>
+
                             <Route path={"/letters"} component={LettersRoot} exact/>
                             <Route path={"/insert/letter"} component={InsertLetter} exact/>
+                            <Route path={"/insert/letter/:id"} component={InsertLetter} exact/>
                         </Switch>
                     </div>
                 </div>

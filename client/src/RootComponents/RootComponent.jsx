@@ -7,48 +7,46 @@ import UpsertUserComponent from "../components/users/UpsertUserComponent";
 import LettersRoot from "../components/letters/LettersRoot";
 import InsertLetter from "../components/letters/InsertLetter";
 import PoolRoot from "../components/pool/PoolRoot";
+import HomePageUser from "../components/userSide/HomePageUser";
 
 const RootComponent = ({history})=>{
     return(
         <div>
-            {history.location.pathname!=="/adminlogin" ?(
-                <AdminLayout/>
-            ):null}
-            <div className="main-content">
-                    <div className="header bg-gradient-primary pb-8 pt-5 pt-md-8 text-right">
-                    <div className="container-fluid" style={{marginTop:"60px"}}>
-                        <Switch>
-                            <Route path={"/adminlogin"} component={LoginComponent} exact/>
+            <Switch>
+                <Route path={["/adminlogin","/users","/upsert/user","/upsert/user/:id","/letters","/insert/letter","/insert/letter/:id","/pools","/admin"]}>
+                    {history.location.pathname!=="/adminlogin" ?(
+                        <AdminLayout/>
+                    ):null}
+                    <div className="main-content">
+                        <div className="header bg-gradient-primary pb-8 pt-5 pt-md-8 text-right">
+                            <div className="container-fluid" style={{marginTop:"60px"}}>
+                                <Switch>
+                                    <Route path={"/adminlogin"} component={LoginComponent} exact/>
 
-                            <Route path={"/users"} component={UsersRoot} exact/>
-                            <Route path={"/upsert/user"} component={UpsertUserComponent} exact/>
-                            <Route path={"/upsert/user/:id"} component={UpsertUserComponent} exact/>
+                                    <Route path={"/users"} component={UsersRoot} exact/>
+                                    <Route path={"/upsert/user"} component={UpsertUserComponent} exact/>
+                                    <Route path={"/upsert/user/:id"} component={UpsertUserComponent} exact/>
 
-                            <Route path={"/letters"} component={LettersRoot} exact/>
-                            <Route path={"/insert/letter"} component={InsertLetter} exact/>
-                            <Route path={"/insert/letter/:id"} component={InsertLetter} exact/>
+                                    <Route path={"/letters"} component={LettersRoot} exact/>
+                                    <Route path={"/insert/letter"} component={InsertLetter} exact/>
+                                    <Route path={"/insert/letter/:id"} component={InsertLetter} exact/>
 
-                            <Route path={"/pools"} component={PoolRoot} exact/>
-                        </Switch>
+                                    <Route path={"/pools"} component={PoolRoot} exact/>
+                                </Switch>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-
-    /*<Fragment>
-        {history.location.pathname!=="/login" ?(<MainNavBar/>):(null)}
-        <div className="main-content">
-            {history.location.pathname!=="/login" ?(<TopNavBar/>):(null)}
-            <div className="header bg-gradient-primary pb-8 pt-5 pt-md-8 text-right">
-                <div className="container-fluid" style={{marginTop:"60px"}}>
+                </Route>
+                <Route path={["/","/userlogin"]}>
                     <Switch>
-                        <Route path={"/contractors"} component={ContractorListTable} exact/>
+                        <Route path={"/"} component={HomePageUser}/>
                     </Switch>
-                </div>
-            </div>
+                </Route>
+            </Switch>
         </div>
-    </Fragment>*/
+
+
+    /**/
     )
 }
 export default withRouter(RootComponent)

@@ -1,6 +1,16 @@
 import React ,{Fragment} from 'react'
+import 'react-slideshow-image/dist/styles.css'
+import { Slide } from 'react-slideshow-image';
+
 
 const HomePageUser = ()=>{
+    const slideImages = [
+        'https://i.picsum.photos/id/103/450/312.jpg?hmac=X4nbGvgKyBXNzVFQqBunavy3JQ9LQ_YhjdtV1Obdnxo',
+        'https://i.picsum.photos/id/103/450/312.jpg?hmac=X4nbGvgKyBXNzVFQqBunavy3JQ9LQ_YhjdtV1Obdnxo',
+        'https://i.picsum.photos/id/103/450/312.jpg?hmac=X4nbGvgKyBXNzVFQqBunavy3JQ9LQ_YhjdtV1Obdnxo'
+    ];
+
+
     const containerUserSide = {
         display:"flex",
         flex:1,
@@ -99,7 +109,29 @@ const HomePageUser = ()=>{
                         <p style={simpleText}>شماره واحد : 20</p>
                     </div>
                 </div>
-                <img style={imageStyle} src={"https://picsum.photos/312/312"}/>
+                {/*<img style={imageStyle} src={"https://picsum.photos/312/312"}/>*/}
+                <div >
+                    <Slide easing="ease" style={imageStyle}  >
+                        <div className="each-slide">
+                            <div style={{'backgroundImage': `url(${slideImages[0]})`,width:"100%",
+                                height:250}}>
+                                <span style={{textAlign:"right",display:"block",color:"white",background:"#88898d",padding:7}}>تست شماره یک</span>
+                            </div>
+                        </div>
+                        <div className="each-slide">
+                            <div style={{'backgroundImage': `url(${slideImages[1]})`,width:"100%",
+                                height:250}}>
+                                <span style={{textAlign:"right",display:"block",color:"white",background:"#88898d",padding:7}}>تست شماره دو</span>
+                            </div>
+                        </div>
+                        <div className="each-slide">
+                            <div style={{'backgroundImage': `url(${slideImages[2]})`,width:"100%",
+                                height:250}}>
+                                <span style={{textAlign:"right",display:"block",color:"white",background:"#88898d",padding:7}}>تست شماره سه</span>
+                            </div>
+                        </div>
+                    </Slide>
+                </div>
                 <div style={{marginTop:20}}>
                     <div style={setRowContainer}>
                         <div style={circleBtn}>

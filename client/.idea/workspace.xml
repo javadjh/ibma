@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b3316f0-a698-4abe-9b03-8e34b2391882" name="Default Changelist" comment="add login and base of admin layout">
-      <change afterPath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" afterDir="false" />
+    <list default="true" id="6b3316f0-a698-4abe-9b03-8e34b2391882" name="Default Changelist" comment="add user layout">
+      <change afterPath="$PROJECT_DIR$/../handler/adsBoard/command/adsBoardCommand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../handler/adsBoard/query/adsBoradQuery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../model/AdsBoradModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../routes/AdsBoradRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../validators/adsboardValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Storage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Storage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +78,8 @@
       <workItem from="1625062377932" duration="7146000" />
       <workItem from="1625127513070" duration="14752000" />
       <workItem from="1625171670295" duration="2064000" />
-      <workItem from="1625210086444" duration="21377000" />
+      <workItem from="1625210086444" duration="21509000" />
+      <workItem from="1625254766344" duration="2588000" />
     </task>
     <task id="LOCAL-00001" summary="init client">
       <created>1624970583660</created>
@@ -94,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625001748929</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add user layout">
+      <created>1625234455179</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1625234455179</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +130,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init client" />
     <MESSAGE value="add login and base of admin layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="add login and base of admin layout" />
+    <MESSAGE value="add user layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add user layout" />
   </component>
 </project>

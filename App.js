@@ -50,6 +50,7 @@ app.use(function (req, res, next) {
 app.use('/api/v1',require('./routes/UserRoute'))
 app.use('/api/v1',require('./routes/LetterRoute'))
 app.use('/api/v1',require('./routes/PoolRoute'))
+app.use('/api/v1',require('./routes/AdsBoradRoute'))
 
 
 //config other library

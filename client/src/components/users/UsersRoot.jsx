@@ -44,7 +44,7 @@ const UsersRoot = ({history})=>{
     return(
         <Fragment>
             <div className="container-fluid mt--8 text-right">
-                <SearchingComponent onSearching={onSearching}/>
+                <SearchingComponent onSearching={onSearching} firstHint={"نام کاربری"} secondHint={"شماره واحد"} secondInputType={"number"}/>
                 <div className="row">
                     <div className="col">
                         <div className="card shadow">

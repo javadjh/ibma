@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import UsersTable from "../users/UsersTable";
-const SearchingComponent = ({onSearching})=>{
+const SearchingComponent = ({onSearching ,firstHint , secondHint ,secondInputType})=>{
     const [userNameSearch,setUserNameSearch] = useState("")
     const [homeNumberSearch,setHomeNumberSearch] = useState("")
     return(
@@ -13,24 +13,24 @@ const SearchingComponent = ({onSearching})=>{
                                 <div className="row">
                                     <div className="col-lg-5">
                                         <div className="form-group">
-                                            <label className="form-control-label" htmlFor="input-username">جست و جوی نام کاربری</label>
+                                            <label className="form-control-label" htmlFor="input-username">{firstHint}</label>
                                             <input type="text" id="input-username"
                                                    onChange={(e)=>{
                                                        setUserNameSearch(e.target.value)
                                                    }}
                                                    className="form-control form-control-alternative"
-                                                   placeholder="نام کاربری"/>
+                                                   placeholder={firstHint}/>
                                         </div>
                                     </div>
                                     <div className="col-lg-5">
                                         <div className="form-group">
-                                            <label className="form-control-label" htmlFor="input-number">جست و جوی شماره واحد</label>
-                                            <input type="number" id="input-number"
+                                            <label className="form-control-label" htmlFor="">{secondHint}</label>
+                                            <input type={secondInputType} id="input-number"
                                                    onChange={(e)=>{
                                                        setHomeNumberSearch(e.target.value)
                                                    }}
                                                    className="form-control form-control-alternative"
-                                                   placeholder="256"/>
+                                                   placeholder={secondHint}/>
                                         </div>
                                     </div>
 

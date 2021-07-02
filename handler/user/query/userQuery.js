@@ -11,10 +11,8 @@ module.exports.getUsers= async (req,res)=>{
         const homeNumberInt = req.query.homeNumberSearch
         let filter={}
         if(homeNumberInt===0 ||homeNumberInt===undefined ||homeNumberInt==="" ){
-            console.log("first")
             filter={userName:new RegExp(req.query.userNameSearch)}
         }else {
-            console.log("second")
             filter = {
                 userName: new RegExp(req.query.userNameSearch),
                 homeNumber: parseInt(homeNumberInt)

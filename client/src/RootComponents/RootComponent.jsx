@@ -6,6 +6,7 @@ import UsersRoot from "../components/users/UsersRoot";
 import UpsertUserComponent from "../components/users/UpsertUserComponent";
 import LettersRoot from "../components/letters/LettersRoot";
 import InsertLetter from "../components/letters/InsertLetter";
+import PoolRoot from "../components/pool/PoolRoot";
 
 const RootComponent = ({history})=>{
     return(
@@ -26,6 +27,8 @@ const RootComponent = ({history})=>{
                             <Route path={"/letters"} component={LettersRoot} exact/>
                             <Route path={"/insert/letter"} component={InsertLetter} exact/>
                             <Route path={"/insert/letter/:id"} component={InsertLetter} exact/>
+
+                            <Route path={"/pools"} component={PoolRoot} exact/>
                         </Switch>
                     </div>
                 </div>

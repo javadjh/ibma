@@ -50,6 +50,7 @@ module.exports.upsertUser = async (req,res)=>{
 }
 module.exports.deleteUser = async (req,res)=>{
     //delete user
+
     const isIdValid = mongoose.isValidObjectId(req.params.id)
     if(!isIdValid) return res.status(400).send({"error":"ای دی مشکل دارد"})
     let deleteUser = await UserModel.findOneAndRemove({

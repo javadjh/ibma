@@ -13,13 +13,12 @@ const LettersRoot =({history})=>{
     const dispatch = useDispatch()
     const letters = useSelector(state => state.letters)
     useEffect(()=>{
-        console.log("sdcfsdc")
         getLettersData()
     },[pageId,searchValue])
     const getLettersData = async ()=>{
         await dispatch(getLetters({
             pageId,
-            eachPerPage: 4,
+            eachPerPage: 10,
             searchValue
         }))
         setIsDataLoaded(true)

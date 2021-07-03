@@ -8,5 +8,7 @@
   "insertLetter": "/insert/letter",
   "pools": "/pools",
   "adsboard": "/adsboards",
-  "usersPool": "/pools/user"
+  "usersPool": "/pools/user",
+  "dateCheckPool": "/check/pools/user",
+  "insertPool": "/insert/pool"
 }

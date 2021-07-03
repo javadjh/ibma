@@ -22,21 +22,21 @@ module.exports.checkPoolTurn = async (req,res)=>{
     try {
         //get total pool turns inserted on date
         const totalPoolTurn = await PoolModel.find({
-            turnDate: req.body.date
+            turnDate: req.query.date
         }).count()
 
 
         //check user has turn
         const isUserHasTurn = await PoolModel.findOne({
-            turnDate: req.body.date,
+            turnDate: req.query.date,
             userId:req.user._id
         })
 
         if(isUserHasTurn){
-            res.send({
+             return res.send({
                 "turnsCount":totalPoolTurn,
                 "canTakeTurn":false,
-                "message":"شمار در این روز نوبت دارد"
+                "message":"شما در این روز نوبت دارید"
             })
         }
 
@@ -48,16 +48,16 @@ module.exports.checkPoolTurn = async (req,res)=>{
 
         //check limit count and turns have
         if(totalPoolTurn>=limit){
-            res.send({
+            return res.send({
                 "turnsCount":totalPoolTurn,
                 "canTakeTurn":false,
                 "message":"متاسفانه روز انتخاب شده ظرفیت ندارد"
             })
         }else{
-            res.send({
+            return res.send({
                 "turnsCount":totalPoolTurn,
                 "canTakeTurn":true,
-                "message":"شمار میتوانید این روز را رزرو کنید"
+                "message":"شما میتوانید این روز را رزرو کنید"
             })
         }
     }catch (err){

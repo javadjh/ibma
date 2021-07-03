@@ -53,7 +53,7 @@ const HomePageUser = ({history})=>{
                         <img style={imgCircle} src={"./assets/img/swimming.png"} />
                     </div>
                     <div style={circleBtn}>
-                        <img style={imgCircle} src={"./assets/img/swimming.png"} />
+                        <img style={imgCircle} src={"./assets/img/mail.png"} />
                     </div>
                     <div style={circleBtn}>
                         <img style={imgCircle} src={"./assets/img/swimming.png"} />

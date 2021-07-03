@@ -46,13 +46,15 @@ const HomePageUser = ({history})=>{
             <CardInformation/>
             <AdsBoards ads={ads}/>
             <div style={{marginTop:20}}>
-                <div style={setRowContainer} onClick={()=>{
-                    history.push("/pooluser")
-                }}>
-                    <div style={circleBtn}>
+                <div style={setRowContainer}>
+                    <div style={circleBtn}  onClick={()=>{
+                        history.push("/pooluser")
+                    }}>
                         <img style={imgCircle} src={"./assets/img/swimming.png"} />
                     </div>
-                    <div style={circleBtn}>
+                    <div style={circleBtn} onClick={()=>{
+                        history.push("/usersletter")
+                    }}>
                         <img style={imgCircle} src={"./assets/img/mail.png"} />
                     </div>
                     <div style={circleBtn}>
@@ -71,7 +73,7 @@ const HomePageUser = ({history})=>{
                         fontSize: 12,
                         flex:1,
                         color:"white",
-                    }}>نوبت استخر</p>
+                    }}>نامه ها</p>
                     <p style={{
                         fontSize: 12,
                         flex:1,

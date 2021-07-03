@@ -10,5 +10,6 @@
   "adsboard": "/adsboards",
   "usersPool": "/pools/user",
   "dateCheckPool": "/check/pools/user",
-  "insertPool": "/insert/pool"
+  "insertPool": "/insert/pool",
+  "usersLetter": "/letters/user"
 }

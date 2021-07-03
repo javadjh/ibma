@@ -7,6 +7,7 @@ import {TurnsReducer} from "./TurnsReducer";
 import {AdsBoardReducer} from "./AdsBoardReducer";
 import {UsersPoolTurnReducer} from "./UsersPoolTurnReducer";
 import {DateCheckPoolReducer} from "./DateCheckPoolReducer";
+import {UsersLetterReducer} from "./UsersLetterReducer";
 
 export const reducersC = combineReducers({
     user:UserReducer,
@@ -16,5 +17,6 @@ export const reducersC = combineReducers({
     turns:TurnsReducer,
     adsBoard:AdsBoardReducer,
     usersTurn:UsersPoolTurnReducer,
-    dateCheckPool:DateCheckPoolReducer
+    dateCheckPool:DateCheckPoolReducer,
+    usersLetter:UsersLetterReducer
 })

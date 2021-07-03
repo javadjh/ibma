@@ -9,6 +9,7 @@ import InsertLetter from "../components/letters/InsertLetter";
 import PoolRoot from "../components/pool/PoolRoot";
 import HomePageUser from "../components/userSide/HomePageUser";
 import PoolUser from "../components/userSide/PoolTurnUserSide/PoolUser";
+import UsersLetterRoot from "../components/userSide/usersLetter/UsersLetterRoot";
 
 const RootComponent = ({history})=>{
     const containerUserSide = {
@@ -46,12 +47,13 @@ const RootComponent = ({history})=>{
                         </div>
                     </div>
                 </Route>
-                <Route path={["/","/userlogin","/pooluser"]}>
+                <Route path={["/","/userlogin","/pooluser","/usersletter"]}>
                     <div style={containerUserSide}>
                         <Switch>
                             <Route path={"/"} component={HomePageUser} exact/>
                             <Route path={"/dddddddd"} component={PoolUser} exact/>
                             <Route path={"/pooluser"} component={PoolUser} exact/>
+                            <Route path={"/usersletter"} component={UsersLetterRoot} exact/>
                         </Switch>
                     </div>
                 </Route>

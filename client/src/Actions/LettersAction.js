@@ -1,4 +1,4 @@
-import {allLettersService, getLettersService} from "../APIConfig/letterService";
+import {allLettersService, getLettersService, getUsersLetterService} from "../APIConfig/letterService";
 
 export const getLetters = (filter)=>{
     return async (dispatch,state)=>{
@@ -13,6 +13,15 @@ export const addLetter = (letter)=>{
         const {data,status}= await allLettersService(letter)
         if(status===200){
             console.log(data)
+        }
+    }
+}
+export const getUsersLetterAction = (filter)=>{
+    return async (dispatch,state)=>{
+        const {data,status}= await getUsersLetterService(filter)
+        console.log(data)
+        if(status===200){
+            dispatch({type:"INIT_USERS_LETTER",payload:data.letters})
         }
     }
 }

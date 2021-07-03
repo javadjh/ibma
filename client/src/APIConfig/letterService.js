@@ -10,3 +10,9 @@ export const getLettersService=(filter)=>{
 export const allLettersService=(letter)=>{
     return axiosConfig.post(`${config.baseUrl}${config.insertLetter}`,letter)
 }
+
+export const getUsersLetterService=(filter)=>{
+    return axiosConfig.get(`${config.baseUrl}${config.usersLetter}`,{
+        params:filter
+    })
+}

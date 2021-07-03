@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b3316f0-a698-4abe-9b03-8e34b2391882" name="Default Changelist" comment="add user layout">
-      <change afterPath="$PROJECT_DIR$/../handler/adsBoard/command/adsBoardCommand.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../handler/adsBoard/query/adsBoradQuery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../model/AdsBoradModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../routes/AdsBoradRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../validators/adsboardValidator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../App.js" afterDir="false" />
+    <list default="true" id="6b3316f0-a698-4abe-9b03-8e34b2391882" name="Default Changelist" comment="add slider ads board (ui and backend)">
+      <change afterPath="$PROJECT_DIR$/src/APIConfig/adsBoardService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Actions/AdsBoardAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Reducers/AdsBoardReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Reducers/UsersPoolTurnReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userSide/AdsBoards.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userSide/CardInformation.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userSide/PoolTurnUserSide/PoolUser.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/APIConfig/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/APIConfig/poolService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/poolService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/TurnsAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/TurnsAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Storage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Storage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/pool/query/poolQueryUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/pool/query/poolQueryUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/PoolRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/PoolRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +88,8 @@
       <workItem from="1625127513070" duration="14752000" />
       <workItem from="1625171670295" duration="2064000" />
       <workItem from="1625210086444" duration="21509000" />
-      <workItem from="1625254766344" duration="2588000" />
+      <workItem from="1625254766344" duration="2913000" />
+      <workItem from="1625294782293" duration="12843000" />
     </task>
     <task id="LOCAL-00001" summary="init client">
       <created>1624970583660</created>
@@ -109,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625234455179</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add slider ads board (ui and backend)">
+      <created>1625261573666</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1625261573666</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +148,7 @@
     <MESSAGE value="init client" />
     <MESSAGE value="add login and base of admin layout" />
     <MESSAGE value="add user layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="add user layout" />
+    <MESSAGE value="add slider ads board (ui and backend)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add slider ads board (ui and backend)" />
   </component>
 </project>

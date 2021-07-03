@@ -8,8 +8,17 @@ import LettersRoot from "../components/letters/LettersRoot";
 import InsertLetter from "../components/letters/InsertLetter";
 import PoolRoot from "../components/pool/PoolRoot";
 import HomePageUser from "../components/userSide/HomePageUser";
+import PoolUser from "../components/userSide/PoolTurnUserSide/PoolUser";
 
 const RootComponent = ({history})=>{
+    const containerUserSide = {
+        display:"flex",
+        flex:1,
+        weight:"100%",
+        backgroundImage: "linear-gradient(45deg, #88898d, #484848)",
+        height:"100vh",
+        flexDirection:"column"
+    }
     return(
         <div>
             <Switch>
@@ -37,10 +46,14 @@ const RootComponent = ({history})=>{
                         </div>
                     </div>
                 </Route>
-                <Route path={["/","/userlogin"]}>
-                    <Switch>
-                        <Route path={"/"} component={HomePageUser}/>
-                    </Switch>
+                <Route path={["/","/userlogin","/pooluser"]}>
+                    <div style={containerUserSide}>
+                        <Switch>
+                            <Route path={"/"} component={HomePageUser} exact/>
+                            <Route path={"/dddddddd"} component={PoolUser} exact/>
+                            <Route path={"/pooluser"} component={PoolUser} exact/>
+                        </Switch>
+                    </div>
                 </Route>
             </Switch>
         </div>

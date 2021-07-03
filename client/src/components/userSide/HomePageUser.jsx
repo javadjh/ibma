@@ -1,82 +1,23 @@
-import React ,{Fragment} from 'react'
+import React, {Fragment, useEffect} from 'react'
 import 'react-slideshow-image/dist/styles.css'
 import { Slide } from 'react-slideshow-image';
+import {useDispatch, useSelector} from "react-redux";
+import {getAdsBoardAction} from "../../Actions/AdsBoardAction";
+import CardInformation from "./CardInformation";
+import AdsBoards from "./AdsBoards";
 
 
-const HomePageUser = ()=>{
-    const slideImages = [
-        'https://i.picsum.photos/id/103/450/312.jpg?hmac=X4nbGvgKyBXNzVFQqBunavy3JQ9LQ_YhjdtV1Obdnxo',
-        'https://i.picsum.photos/id/103/450/312.jpg?hmac=X4nbGvgKyBXNzVFQqBunavy3JQ9LQ_YhjdtV1Obdnxo',
-        'https://i.picsum.photos/id/103/450/312.jpg?hmac=X4nbGvgKyBXNzVFQqBunavy3JQ9LQ_YhjdtV1Obdnxo'
-    ];
+const HomePageUser = ({history})=>{
 
+    const dispatch = useDispatch()
+    const ads = useSelector(state => state.adsBoard)
 
-    const containerUserSide = {
-        display:"flex",
-        flex:1,
-        backgroundImage: "linear-gradient(45deg, #88898d, #484848)",
-        height:"100vh",
-        flexDirection:"column"
-    }
-
-    const userCard = {
-        backgroundColor:"#88898d",
-        borderRadius:15,
-        borderColor:"white",
-        borderWidth:5,
-        margin:20,
-        padding:8,
-        textAlign:"right",
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 12,
-        },
-        shadowOpacity: 0.58,
-        shadowRadius: 16.00,
-
-        elevation: 24,
-    }
-    const simpleText ={
-        fontSize: 12,
-        color:"white",
-        display:"inline",
-        marginTop:10
-    }
-    const boldText={
-        color:"white",
-        display:"inline",
-        marginTop:10,
-        fontSize:20
-    }
-    const textStarter ={
-        color:"white",
-        display:"inline",
-        marginTop:10,
-        marginRight:20,
-        fontSize: 12
-    }
-    const imageStyle={
-        marginRight: 20,
-        marginLeft:20,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 12,
-        },
-        shadowOpacity: 0.58,
-        shadowRadius: 16.00,
-
-        elevation: 24,
-        borderRadius: 15,
-        height:250
-    }
     const circleBtn ={
         display:"inline",
         flex:1,
         backgroundColor: "white",
         borderRadius:80,
-        marginLeft:30
+        marginLeft:20
     }
     const imgCircle={
         margin: 10,
@@ -91,87 +32,60 @@ const HomePageUser = ()=>{
         flexDirection:"row",
         flexWrap:"wrap",
         marginRight:20,
-        textAlign: "center"
+        textAlign: "center",
+    }
+
+    useEffect(()=>{
+        getAdsData();
+    },[])
+    const getAdsData= async ()=>{
+        await dispatch(getAdsBoardAction())
     }
     return(
         <Fragment>
-            <div style={containerUserSide}>
-                <div style={userCard}>
-                    <p style={textStarter}>آقای </p>
-                    <p style={boldText}> "محمد جواد حجتی" </p>
-                    <p style={simpleText}> خوش آمدید</p>
-                    <div style={{marginRight:20,marginTop:10}}>
-                        <p style={simpleText}>شما </p>
-                        <p style={boldText}> 18 </p>
-                        <p style={simpleText}> روز پیش شارژ را پرداخت کرده اید</p>
+            <CardInformation/>
+            <AdsBoards ads={ads}/>
+            <div style={{marginTop:20}}>
+                <div style={setRowContainer} onClick={()=>{
+                    history.push("/pooluser")
+                }}>
+                    <div style={circleBtn}>
+                        <img style={imgCircle} src={"./assets/img/swimming.png"} />
                     </div>
-                    <div style={{marginRight:20}}>
-                        <p style={simpleText}>شماره واحد : 20</p>
+                    <div style={circleBtn}>
+                        <img style={imgCircle} src={"./assets/img/swimming.png"} />
+                    </div>
+                    <div style={circleBtn}>
+                        <img style={imgCircle} src={"./assets/img/swimming.png"} />
                     </div>
                 </div>
-                {/*<img style={imageStyle} src={"https://picsum.photos/312/312"}/>*/}
-                <div >
-                    <Slide easing="ease" style={imageStyle}  >
-                        <div className="each-slide">
-                            <div style={{'backgroundImage': `url(${slideImages[0]})`,width:"100%",
-                                height:250}}>
-                                <span style={{textAlign:"right",display:"block",color:"white",background:"#88898d",padding:7}}>تست شماره یک</span>
-                            </div>
-                        </div>
-                        <div className="each-slide">
-                            <div style={{'backgroundImage': `url(${slideImages[1]})`,width:"100%",
-                                height:250}}>
-                                <span style={{textAlign:"right",display:"block",color:"white",background:"#88898d",padding:7}}>تست شماره دو</span>
-                            </div>
-                        </div>
-                        <div className="each-slide">
-                            <div style={{'backgroundImage': `url(${slideImages[2]})`,width:"100%",
-                                height:250}}>
-                                <span style={{textAlign:"right",display:"block",color:"white",background:"#88898d",padding:7}}>تست شماره سه</span>
-                            </div>
-                        </div>
-                    </Slide>
-                </div>
-                <div style={{marginTop:20}}>
-                    <div style={setRowContainer}>
-                        <div style={circleBtn}>
-                            <img style={imgCircle} src={"./assets/img/swimming.png"} />
-                        </div>
-                        <div style={circleBtn}>
-                            <img style={imgCircle} src={"./assets/img/swimming.png"} />
-                        </div>
-                        <div style={circleBtn}>
-                            <img style={imgCircle} src={"./assets/img/swimming.png"} />
-                        </div>
-                    </div>
 
-                    <div style={setRowContainer}>
-                        <p style={{
-                            fontSize: 12,
-                            color:"white",
-                            flex:1,
-                            marginRight:-10
-                        }}>نوبت استخر</p>
-                        <p style={{
-                            fontSize: 12,
-                            flex:1,
-                            color:"white",
-                        }}>نوبت استخر</p>
-                        <p style={{
-                            fontSize: 12,
-                            flex:1,
-                            color:"white",
-                            marginLeft:15
-                        }}>نوبت استخر</p>
-                    </div>
+                <div style={setRowContainer}>
+                    <p style={{
+                        fontSize: 12,
+                        color:"white",
+                        flex:1,
+                        marginRight:-10
+                    }}>نوبت استخر</p>
+                    <p style={{
+                        fontSize: 12,
+                        flex:1,
+                        color:"white",
+                    }}>نوبت استخر</p>
+                    <p style={{
+                        fontSize: 12,
+                        flex:1,
+                        color:"white",
+                        marginLeft:15
+                    }}>نوبت استخر</p>
                 </div>
-                <img style={{
-                    position:"fixed",
-                    bottom:0,
-                    maxHeight:85,
-                    width:"100%"
-                }} src={"./assets/img/foter.png"}/>
             </div>
+            <img style={{
+                position:"fixed",
+                bottom:0,
+                maxHeight:85,
+                width:"100%"
+            }} src={"./assets/img/foter.png"}/>
         </Fragment>
     )
 }

@@ -6,3 +6,6 @@ export const getPoolsTurnService = (filter)=>{
         params:filter
     })
 }
+export const getUsersPoolTurnService = ()=>{
+    return axiosConfig.get(`${config.baseUrl}${config.usersPool}`)
+}

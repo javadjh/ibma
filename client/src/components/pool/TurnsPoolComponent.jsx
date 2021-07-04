@@ -1,34 +1,33 @@
 import React from 'react'
 import PagingComponent from "../../utility/PagingComponent";
-
+const cardStyleTurn = {
+    paddingTop: 10,
+    flex:1,
+    marginLeft:10,
+    marginRight:10 ,
+    minWidth:200,
+    justifyContent:"center",
+    alignItems:"center",
+    marginTop:10,
+    marginBottom:10
+}
+const aStyle={
+    margin:4,
+    color:"black",
+    fontSize:15,
+}
+const badgeDateStyle={
+    margin:4,
+    color:"white",
+    padding:5,
+    fontSize:15,
+    backgroundColor:"green",
+    width:"100%",
+    textAlign:"center",
+    borderBottomLeftRadius:10,
+    borderBottomRightRadius:10
+}
 const TurnsPoolComponent = ({turns,handelPaging})=>{
-    const cardStyleTurn = {
-        paddingTop: 10,
-        flex:1,
-        marginLeft:10,
-        marginRight:10 ,
-        minWidth:200,
-        justifyContent:"center",
-        alignItems:"center",
-        marginTop:10,
-        marginBottom:10
-    }
-    const aStyle={
-        margin:4,
-        color:"black",
-        fontSize:15,
-    }
-    const badgeDateStyle={
-        margin:4,
-        color:"white",
-        padding:5,
-        fontSize:15,
-        backgroundColor:"green",
-        width:"100%",
-        textAlign:"center",
-        borderBottomLeftRadius:10,
-        borderBottomRightRadius:10
-    }
     return(
         <div>
             <div style={{

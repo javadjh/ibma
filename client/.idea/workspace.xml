@@ -5,13 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b3316f0-a698-4abe-9b03-8e34b2391882" name="Default Changelist" comment="add pool page and calender and get history limited 3 element">
-      <change afterPath="$PROJECT_DIR$/src/components/userSide/userPayment/UserPaymentRoot.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userSide/usersLetter/LettersListComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/APIConfig/dashboardService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/APIConfig/paymentService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Actions/AdminDashboardAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Actions/PaymentAction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Reducers/AdminDashboardReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Reducers/PaymentUserPageReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ads/AdsComponentRoot.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ads/AdsTable.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/dashboard/AdminDashboardRoot.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../handler/dashboard/command/DashboardCommand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../handler/dashboard/query/DashboardAdmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../handler/payment/query/paymentQueryUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../routes/DashboardRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../routes/PaymentRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/argon.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/argon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/APIConfig/adsBoardService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/adsBoardService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/APIConfig/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/AdsBoardAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/AdsBoardAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/LettersAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/LettersAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/SingleUserAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/SingleUserAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/TurnsAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/TurnsAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/UserAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/UserAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/UsersAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/UsersAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RootComponents/AdminLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/AdminLayout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Storage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Storage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pool/TurnsPoolComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pool/TurnsPoolComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/userSide/usersLetter/UsersLetterRoot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userSide/usersLetter/UsersLetterRoot.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userSide/userPayment/UserPaymentRoot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userSide/userPayment/UserPaymentRoot.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/utilityComponent/SearchingComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/utilityComponent/SearchingComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/adsBoard/command/adsBoardCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/adsBoard/command/adsBoardCommand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model/AppSettingModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../model/AppSettingModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/AdsBoradRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/AdsBoradRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +112,8 @@
       <workItem from="1625294782293" duration="19411000" />
       <workItem from="1625326403593" duration="5537000" />
       <workItem from="1625345218982" duration="789000" />
-      <workItem from="1625380999215" duration="1442000" />
+      <workItem from="1625380999215" duration="16450000" />
+      <workItem from="1625408477688" duration="4052000" />
     </task>
     <task id="LOCAL-00001" summary="init client">
       <created>1624970583660</created>

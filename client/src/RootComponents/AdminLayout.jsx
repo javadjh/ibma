@@ -1,9 +1,11 @@
 import React ,{Fragment} from 'react'
 import {NavLink} from "react-router-dom";
+import LoadingBar from "react-redux-loading-bar";
 
 const AdminLayout=()=>{
     return(
         <Fragment>
+
             <nav className="navbar navbar-vertical fixed-right navbar-expand-md navbar-light bg-white" id="sidenav-main">
                 <div className="container-fluid">
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,7 +91,7 @@ const AdminLayout=()=>{
                         </form>
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <NavLink className={"nav-link"} exact  to={"/"} >
+                                <NavLink className={"nav-link"} exact  to={"/admin"} >
                                     <i className="ni ni-tv-2 text-primary"></i> داشبورد
                                 </NavLink>
                             </li>
@@ -102,6 +104,9 @@ const AdminLayout=()=>{
                                 </NavLink>
                                 <NavLink className="nav-link" to={"/pools"}>
                                     <i className="ni ni-tv-2 text-primary"></i>نوبت های استخر
+                                </NavLink>
+                                <NavLink className="nav-link" to={"/ads"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>تبلیغات
                                 </NavLink>
                                 {/*
                                 <NavLink className="nav-link" to={"/reportage"}>

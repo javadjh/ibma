@@ -1,11 +1,14 @@
 import {deleteUserService, login, singleUserService, upsertUserService, usersService} from "../APIConfig/userService";
 import jsonwebtoken from 'jsonwebtoken';
+import {hideLoading, showLoading} from "react-redux-loading-bar";
 
 export const initUser=(user)=>{
     return async (dispatch,state)=>{
+        await dispatch(showLoading())
         const {data,status} = await login(user)
         console.log(data.token)
         if(status===200) {
+            await dispatch(hideLoading())
             const userToken = await jsonwebtoken.decode(data.token,{complete:true})
             await dispatch({type: "INTI_USER", payload: userToken.payload})
             await localStorage.setItem("token",data.token)

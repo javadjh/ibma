@@ -8,8 +8,11 @@
   "insertLetter": "/insert/letter",
   "pools": "/pools",
   "adsboard": "/adsboards",
+  "deleteAd": "/adsboard/",
   "usersPool": "/pools/user",
   "dateCheckPool": "/check/pools/user",
   "insertPool": "/insert/pool",
-  "usersLetter": "/letters/user"
+  "usersLetter": "/letters/user",
+  "userPayment": "/payment",
+  "adminDashboard": "/admin"
 }

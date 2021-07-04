@@ -33,7 +33,7 @@ const HomePageUser = ({history})=>{
         flexWrap:"wrap",
         marginRight:20,
         textAlign: "center",
-        marginTop: 5
+        marginTop: 2
     }
 
     useEffect(()=>{

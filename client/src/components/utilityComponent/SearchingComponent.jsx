@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import UsersTable from "../users/UsersTable";
-const SearchingComponent = ({onSearching ,firstHint , secondHint ,secondInputType})=>{
+const SearchingComponent = ({onSearching ,firstHint , secondHint ,secondInputType ,btnTitle="جست و جو"})=>{
     const [userNameSearch,setUserNameSearch] = useState("")
     const [homeNumberSearch,setHomeNumberSearch] = useState("")
     return(
@@ -41,7 +41,7 @@ const SearchingComponent = ({onSearching ,firstHint , secondHint ,secondInputTyp
                                             <div className="col-4 text-left">
                                                 <a onClick={()=>{
                                                     onSearching(userNameSearch,homeNumberSearch)
-                                                }} style={{color:"white"}} className="btn btn-sm btn-dark p-3">جست و جو</a>
+                                                }} style={{color:"white"}} className="btn btn-sm btn-dark p-3">{btnTitle}</a>
                                             </div>
                                         </div>
                                     </div>

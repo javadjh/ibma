@@ -3,11 +3,11 @@ const mongoose = require('mongoose')
 const AppSettingSchema = new mongoose.Schema({
     poolTurnsLimit:{
         type:Number,
-        default:[true,20]
+        default:20
     },
     payPrice:{
         type:Number,
-        default:[true,300000]
+        default:300000
     }
 })
 

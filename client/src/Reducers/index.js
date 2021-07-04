@@ -8,6 +8,9 @@ import {AdsBoardReducer} from "./AdsBoardReducer";
 import {UsersPoolTurnReducer} from "./UsersPoolTurnReducer";
 import {DateCheckPoolReducer} from "./DateCheckPoolReducer";
 import {UsersLetterReducer} from "./UsersLetterReducer";
+import {PaymentUserPageReducer} from "./PaymentUserPageReducer";
+import {AdminDashboardReducer} from "./AdminDashboardReducer";
+import {loadingBarReducer} from "react-redux-loading-bar";
 
 export const reducersC = combineReducers({
     user:UserReducer,
@@ -18,5 +21,8 @@ export const reducersC = combineReducers({
     adsBoard:AdsBoardReducer,
     usersTurn:UsersPoolTurnReducer,
     dateCheckPool:DateCheckPoolReducer,
-    usersLetter:UsersLetterReducer
+    usersLetter:UsersLetterReducer,
+    paymentUser:PaymentUserPageReducer,
+    adminDashboard:AdminDashboardReducer,
+    loadingBar:loadingBarReducer
 })

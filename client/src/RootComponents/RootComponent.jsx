@@ -15,6 +15,7 @@ import AdminDashboardRoot from "../components/dashboard/AdminDashboardRoot";
 import LoadingBar from "react-redux-loading-bar";
 import {ToastContainer} from "react-toastify";
 import AdsComponentRoot from "../components/ads/AdsComponentRoot";
+import InsertAdComponent from "../components/ads/InsertAdComponent";
 
 const RootComponent = ({history})=>{
     const containerUserSide = {
@@ -29,7 +30,7 @@ const RootComponent = ({history})=>{
         <div>
             <ToastContainer/>
             <Switch>
-                <Route path={["/adminlogin","/users","/upsert/user","/upsert/user/:id","/letters","/insert/letter","/insert/letter/:id","/pools","/admin","/ads"]}>
+                <Route path={["/adminlogin","/users","/upsert/user","/upsert/user/:id","/letters","/insert/letter","/insert/letter/:id","/pools","/admin","/ads","/insert/ads"]}>
                     {history.location.pathname!=="/adminlogin" ?(
                         <AdminLayout/>
                     ):null}
@@ -58,6 +59,7 @@ const RootComponent = ({history})=>{
                                     <Route path={"/pools"} component={PoolRoot} exact/>
 
                                     <Route path={"/ads"} component={AdsComponentRoot} exact/>
+                                    <Route path={"/insert/ads"} component={InsertAdComponent} exact/>
                                 </Switch>
                             </div>
                         </div>

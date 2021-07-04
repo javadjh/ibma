@@ -2,14 +2,19 @@ const _ = require("lodash")
 const AdsBoardModel = require("../../../model/AdsBoradModel");
 const {insertAdsBoardValidator} = require("../../../validators/adsboardValidator");
 const {isValidObjectId} = require('mongoose')
+
 module.exports.insertAdsBoard = async (req,res)=>{
-    const {error} = insertAdsBoardValidator(req.body)
+    const {error} = insertAdsBoardValidator({
+        title:req.body.title,
+        url:req.body.url,
+        image:req.file.filename
+    })
     if(error) return res.status(400).send({"error":error.message})
-    let newAdsBoard = await new AdsBoardModel(_.pick(req.body,[
-        "title",
-        "image",
-        "url"
-    ]))
+    let newAdsBoard = await new AdsBoardModel({
+        title:req.body.title,
+        url:req.body.url,
+        image:req.file.filename
+    })
     newAdsBoard = await newAdsBoard.save()
     res.send(newAdsBoard)
 }

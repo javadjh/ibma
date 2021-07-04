@@ -7,3 +7,6 @@ export const getAdsBoardService = ()=>{
 export const deleteAdsBoardService = (id)=>{
     return axiosConfig.delete(`${config.baseUrl}${config.deleteAd}${id}`)
 }
+export const insertAdService = (ad)=>{
+    return axiosConfig.post(`${config.baseUrl}${config.insertAd}`,ad)
+}

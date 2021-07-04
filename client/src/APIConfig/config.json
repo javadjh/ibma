@@ -9,6 +9,7 @@
   "pools": "/pools",
   "adsboard": "/adsboards",
   "deleteAd": "/adsboard/",
+  "insertAd": "/insert/adsboards",
   "usersPool": "/pools/user",
   "dateCheckPool": "/check/pools/user",
   "insertPool": "/insert/pool",

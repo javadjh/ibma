@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b3316f0-a698-4abe-9b03-8e34b2391882" name="Default Changelist" comment="add pool page and calender and get history limited 3 element">
-      <change afterPath="$PROJECT_DIR$/src/Reducers/UsersLetterReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userSide/usersLetter/UsersLetterRoot.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userSide/userPayment/UserPaymentRoot.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userSide/usersLetter/LettersListComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/APIConfig/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/APIConfig/letterService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/letterService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actions/LettersAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/LettersAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Storage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Storage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userSide/usersLetter/UsersLetterRoot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userSide/usersLetter/UsersLetterRoot.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +81,8 @@
       <workItem from="1625254766344" duration="2913000" />
       <workItem from="1625294782293" duration="19411000" />
       <workItem from="1625326403593" duration="5537000" />
+      <workItem from="1625345218982" duration="789000" />
+      <workItem from="1625380999215" duration="1442000" />
     </task>
     <task id="LOCAL-00001" summary="init client">
       <created>1624970583660</created>

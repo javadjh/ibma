@@ -33,6 +33,7 @@ const HomePageUser = ({history})=>{
         flexWrap:"wrap",
         marginRight:20,
         textAlign: "center",
+        marginTop: 5
     }
 
     useEffect(()=>{
@@ -57,8 +58,10 @@ const HomePageUser = ({history})=>{
                     }}>
                         <img style={imgCircle} src={"./assets/img/mail.png"} />
                     </div>
-                    <div style={circleBtn}>
-                        <img style={imgCircle} src={"./assets/img/swimming.png"} />
+                    <div style={circleBtn} onClick={()=>{
+                        history.push("/userpayment")
+                    }}>
+                        <img style={imgCircle} src={"./assets/img/credit-card.png"} />
                     </div>
                 </div>
 
@@ -78,8 +81,8 @@ const HomePageUser = ({history})=>{
                         fontSize: 12,
                         flex:1,
                         color:"white",
-                        marginLeft:15
-                    }}>نوبت استخر</p>
+                        marginLeft:10
+                    }}>پرداخت شارژ</p>
                 </div>
             </div>
             <img style={{

@@ -2,27 +2,8 @@ import React, {useEffect, useState,Fragment} from 'react'
 import TopNavigation from "../../../utility/TopNavigation";
 import {useDispatch, useSelector} from "react-redux";
 import {getUsersLetterAction} from "../../../Actions/LettersAction";
-const cardShadow={
-    backgroundColor:"white",
-    shadowColor: "#000",
-    shadowOffset: {
-        width: 0,
-        height: 12,
-    },
-    shadowOpacity: 0.58,
-    shadowRadius: 16.00,
-    elevation: 24,
-    borderRadius:15,
-    marginBottom:10,
-    marginTop:5,
-    marginLeft:15,
-    marginRight:15,
-    paddingRight:10,
-    paddingLeft:10,
-    textAlign:"right",
-    paddingTop:5,
-    paddingBottom:5
-}
+import LettersListComponent from "./LettersListComponent";
+
 const UsersLetterRoot = ({history})=>{
     const usersLetterState = useSelector(state => state.usersLetter)
     const [pageId,setPageId] = useState(1)
@@ -47,21 +28,8 @@ const UsersLetterRoot = ({history})=>{
             flexDirection:"column"
         }}>
             <TopNavigation history={history}/>
+            <LettersListComponent isLoaded={isLoaded} usersLetterState={usersLetterState}/>
 
-            {isLoaded?usersLetterState.map(letter=>(
-                <div style={cardShadow}>
-                    <a style={{display:"block",marginTop:10,fontSize:16,fontWeight:"bold"}}>{`عنوان : ${letter.title}`}</a>
-                    <a style={{display:"block",marginTop:5}}>{`تاریخ انتشار : ${letter.createDate}`}</a>
-                    <a style={{display:"block",marginTop:5 ,marginBottom:10}}>{`متن : ${letter.message}`}</a>
-                    {letter.target==="user"?(
-                        <div>
-                            <hr/>
-                            <a style={{display:"block",marginTop:-25,color:"red"}}>این نامه به صورت خصوصی میباشد</a>
-                        </div>
-
-                    ):null}
-                </div>
-            )):null}
 
         </div>
     )

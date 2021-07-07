@@ -18,6 +18,11 @@ const PoolSchema = new mongoose.Schema({
     turnDate:{
         type:Date,
         required:true
+    },
+    buildingId:{
+        required:[true,"ساختمان اجباری میباشد"],
+        type:mongoose.Types.ObjectId,
+        ref:"building"
     }
 })
 const PoolModel = mongoose.model("pool",PoolSchema)

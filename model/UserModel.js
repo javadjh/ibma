@@ -44,7 +44,16 @@ const UserSchema = new mongoose.Schema({
     password:{
         type:String,
         required:true,
-    }
+    },
+    buildings:{
+        type:[mongoose.Types.ObjectId],
+        ref:"building"
+    },
+    usersBuilding:{
+        type:mongoose.Types.ObjectId,
+        ref:"building"
+    },
+
 
 })
 

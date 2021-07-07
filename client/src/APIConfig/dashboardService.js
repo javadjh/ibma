@@ -8,3 +8,8 @@ export const getAdminDashboardService = ()=>{
 export const updateAppSettingService = (appSetting)=>{
     return axiosConfig.post(`${config.baseUrl}${config.adminDashboard}`,appSetting)
 }
+
+export const addBuildingService = (data)=>{
+    console.log(data)
+    return axiosConfig.post(`${config.baseUrl}${config.insertBuilding}`,data)
+}

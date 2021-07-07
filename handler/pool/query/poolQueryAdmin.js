@@ -8,12 +8,14 @@ module.exports.getPoolsTurnAdmin = async (req,res)=>{
     let filter
     if(turnNumber===0 ||turnNumber===undefined ||turnNumber==="" ){
         filter={
-            turnDate:turnDate
+            turnDate:turnDate,
+            buildingId:req.headers.usersbuilding
         }
     }else{
         filter={
             turnNumber:turnNumber,
-            turnDate:turnDate
+            turnDate:turnDate,
+            buildingId:req.headers.usersbuilding
         }
     }
     const turns = await PoolModel.find(filter).populate("userId","_id name lastName userName").limit(ePP)

@@ -17,7 +17,7 @@ module.exports.upsertUser = async (req,res)=>{
                 "phoneNumber",
                 "isAdmin",
                 "homeNumber",
-                "userName"
+                "userName",
             ])
         },{new:true})
         updatedUser = await updatedUser.save()
@@ -35,7 +35,8 @@ module.exports.upsertUser = async (req,res)=>{
             isAdmin:req.body.isAdmin,
             homeNumber:req.body.homeNumber,
             userName:req.body.userName,
-            password
+            password,
+            usersBuilding:req.headers.usersbuilding
         })
         newUser = await newUser.save()
         res.send(_.pick(newUser,[
@@ -45,6 +46,7 @@ module.exports.upsertUser = async (req,res)=>{
             "phoneNumber",
             "homeNumber",
             "userName",
+            "usersBuilding"
         ]))
     }
 }
@@ -72,6 +74,6 @@ module.exports.getUser= async (req,res)=>{
     if(singleUser)
         res.send(singleUser)
     else{
-        res.status(400).send({"error":"خطا در حذف کاربر رخ داد"})
+        res.status(400).send({"error":"خطا در دریافت کاربر رخ داد"})
     }
 }

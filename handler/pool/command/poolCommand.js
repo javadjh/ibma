@@ -3,14 +3,16 @@ const AppSettingModel = require("../../../model/AppSettingModel");
 module.exports.insertPool = async (req,res)=>{
     //get total pool turns inserted on date
     const totalPoolTurn = await PoolModel.find({
-        turnDate: req.body.date
+        turnDate: req.body.date,
+        buildingId:req.headers.usersbuilding
     }).count()
 
 
     //check user has turn
     const isUserHasTurn = await PoolModel.findOne({
         turnDate: req.body.date,
-        userId:req.user._id
+        userId:req.user._id,
+        buildingId:req.headers.usersbuilding
     })
 
     if(isUserHasTurn){
@@ -31,7 +33,8 @@ module.exports.insertPool = async (req,res)=>{
         addPoolTurn = await new PoolModel({
             userId:req.user._id,
             turnNumber:totalPoolTurn+2,
-            turnDate: req.body.date
+            turnDate: req.body.date,
+            buildingId:req.headers.usersbuilding
         })
         addPoolTurn.save()
     }

@@ -10,16 +10,21 @@ module.exports.getUsers= async (req,res)=>{
         const eachPerPage = parseInt(req.query.eachPerPage?req.query.eachPerPage:12)
         const homeNumberInt = req.query.homeNumberSearch
         let filter={}
+        console.log(req.headers.usersbuilding)
         if(homeNumberInt===0 ||homeNumberInt===undefined ||homeNumberInt==="" ){
-            filter={userName:new RegExp(req.query.userNameSearch)}
+            filter={
+                userName:new RegExp(req.query.userNameSearch),
+                usersBuilding:req.headers.usersbuilding
+            }
         }else {
             filter = {
                 userName: new RegExp(req.query.userNameSearch),
-                homeNumber: parseInt(homeNumberInt)
+                homeNumber: parseInt(homeNumberInt),
+                usersBuilding:req.headers.usersbuilding
             }
         }
         console.log(homeNumberInt)
-        let users = await UserModel.find(filter).limit(eachPerPage).skip((pageId-1)*eachPerPage).select("-password").lean()
+        let users = await UserModel.find(filter).limit(eachPerPage).skip((pageId-1)*eachPerPage).select("-password -buildings").lean()
 
         let total = await UserModel.find(filter).count()
 
@@ -59,6 +64,8 @@ module.exports.login= async (req,res)=>{
                 "userName",
                 "isAdmin",
                 "_id",
+                "buildings",
+                "usersBuilding"
             ]))})
     }catch (err){
         console.log(err)

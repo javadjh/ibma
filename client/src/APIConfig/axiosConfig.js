@@ -2,6 +2,7 @@ import axios from "axios";
 import {errorToast} from "../utility/ShowToast";
 axios.defaults.headers.post['Content-Type']="application/json"
 axios.defaults.headers.common['token']=`${localStorage.getItem("token")}`
+axios.defaults.headers.common['usersbuilding']=localStorage.getItem("usersbuilding")
 axios.interceptors.response.use(null,error=>{
     if(error){
         errorToast("خطا در دریافت اطلاعات رخ داده است")

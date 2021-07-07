@@ -16,6 +16,7 @@ import LoadingBar from "react-redux-loading-bar";
 import {ToastContainer} from "react-toastify";
 import AdsComponentRoot from "../components/ads/AdsComponentRoot";
 import InsertAdComponent from "../components/ads/InsertAdComponent";
+import UserLoginRoot from "../components/userSide/userLogin/UserLoginRoot";
 
 const RootComponent = ({history})=>{
     const containerUserSide = {
@@ -65,7 +66,7 @@ const RootComponent = ({history})=>{
                         </div>
                     </div>
                 </Route>
-                <Route path={["/","/userlogin","/pooluser","/usersletter","/userpayment"]}>
+                <Route path={["/","/userlogin","/pooluser","/usersletter","/userpayment","/userlogin"]}>
                     <div style={containerUserSide}>
                         <LoadingBar style={{
                             backgroundColor:"black",
@@ -79,6 +80,7 @@ const RootComponent = ({history})=>{
                             <Route path={"/pooluser"} component={PoolUser} exact/>
                             <Route path={"/usersletter"} component={UsersLetterRoot} exact/>
                             <Route path={"/userpayment"} component={UserPaymentRoot} exact/>
+                            <Route path={"/userlogin"} component={UserLoginRoot} exact/>
                         </Switch>
                     </div>
                 </Route>

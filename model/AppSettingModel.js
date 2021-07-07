@@ -8,6 +8,11 @@ const AppSettingSchema = new mongoose.Schema({
     payPrice:{
         type:Number,
         default:300000
+    },
+    buildingId:{
+        required:[true,"ساختمان اجباری میباشد"],
+        type:mongoose.Types.ObjectId,
+        ref:"building"
     }
 })
 

@@ -14,6 +14,11 @@ const AdsBoardSchema = new mongoose.Schema({
     url:{
         type:String,
         required:[true,"عنوان اجباری میباشد"],
+    },
+    buildingId:{
+        required:[true,"ساختمان اجباری میباشد"],
+        type:mongoose.Types.ObjectId,
+        ref:"building"
     }
 })
 

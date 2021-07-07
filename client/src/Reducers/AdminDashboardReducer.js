@@ -1,6 +1,7 @@
 export const AdminDashboardReducer = (state={
     appSetting:{},
-    users:[]
+    users:[],
+    buildings:[]
 },action)=>{
     switch (action.type){
         case "INIT_ADMIN_DASHBOARD":

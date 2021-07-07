@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://192.168.1.2:1000/api/v1",
+  "baseUrl": "http://localhost:1000/api/v1",
   "login": "/login",
   "users": "/users",
   "upsertUser": "/upsert/user",
@@ -10,6 +10,7 @@
   "adsboard": "/adsboards",
   "deleteAd": "/adsboard/",
   "insertAd": "/insert/adsboards",
+  "insertBuilding": "/insert/building",
   "usersPool": "/pools/user",
   "dateCheckPool": "/check/pools/user",
   "insertPool": "/insert/pool",

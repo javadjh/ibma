@@ -4,7 +4,8 @@ const {convertToShamsi} = require("../../../utility/dateUtility");
 module.exports.getPoolsTurnUser = async (req,res)=>{
     const turns = await PoolModel.find(
         {
-            userId:req.user._id
+            userId:req.user._id,
+            buildingId:req.headers.usersbuilding
         }
     ).populate("userId","_id name lastName userName").limit(3)
         .sort({
@@ -22,14 +23,16 @@ module.exports.checkPoolTurn = async (req,res)=>{
     try {
         //get total pool turns inserted on date
         const totalPoolTurn = await PoolModel.find({
-            turnDate: req.query.date
+            turnDate: req.query.date,
+            buildingId:req.headers.usersbuilding
         }).count()
 
 
         //check user has turn
         const isUserHasTurn = await PoolModel.findOne({
             turnDate: req.query.date,
-            userId:req.user._id
+            userId:req.user._id,
+            buildingId:req.headers.usersbuilding
         })
 
         if(isUserHasTurn){

@@ -7,12 +7,14 @@ module.exports.getLetter = async (req,res)=>{
     const ePP = parseInt(eachPerPage?eachPerPage:12)
 
     let letters = await LetterModel.find({
-        title:new RegExp(searchValue)
+        title:new RegExp(searchValue),
+        buildingId:req.headers.usersbuilding
     }).populate("userId","-password -registerDate -lastPayDate -phoneNumber -isAdmin -__v").limit(ePP).skip((pId-1)*ePP).select("-__v")
         .sort({ createDate : -1}).lean()
 
     const total = await LetterModel.find({
-        title:new RegExp(searchValue)
+        title:new RegExp(searchValue),
+        buildingId:req.headers.usersbuilding
     }).count()
 
     letters.map(v=>v.createDate=convertToShamsi(v.createDate))
@@ -33,7 +35,7 @@ module.exports.getUsersLetter = async (req,res)=>{
 
     let letters = await LetterModel.find({
         title:new RegExp(searchValue),
-
+        buildingId:req.headers.usersbuilding
     })
         .or([
             {"userId": req.user._id},
@@ -44,6 +46,7 @@ module.exports.getUsersLetter = async (req,res)=>{
 
     const total = await LetterModel.find({
         title:new RegExp(searchValue),
+        buildingId:req.headers.usersbuilding,
         $or: [
                 {"userId": req.user._id},
                 {"target": "all"}

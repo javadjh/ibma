@@ -27,6 +27,11 @@ const LetterSchema = new mongoose.Schema({
     userId:{
         type:mongoose.Types.ObjectId,
         ref:"user"
+    },
+    buildingId:{
+        required:[true,"ساختمان اجباری میباشد"],
+        type:mongoose.Types.ObjectId,
+        ref:"building"
     }
 })
 

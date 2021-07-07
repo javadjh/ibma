@@ -37,6 +37,8 @@ const HomePageUser = ({history})=>{
     }
 
     useEffect(()=>{
+        if(!localStorage.getItem("token"))
+            return history.replace("/userlogin")
         getAdsData();
     },[])
     const getAdsData= async ()=>{

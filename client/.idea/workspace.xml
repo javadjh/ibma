@@ -5,19 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b3316f0-a698-4abe-9b03-8e34b2391882" name="Default Changelist" comment="add toast , Loading , dashboard (ui and backend)">
-      <change afterPath="$PROJECT_DIR$/src/components/ads/InsertAdComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/userSide/userLogin/UserLoginRoot.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../handler/building/command/BuildingCommand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../model/BuildingModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../routes/BuildingRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../validators/buildingValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/APIConfig/adsBoardService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/adsBoardService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/APIConfig/axiosConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/axiosConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/APIConfig/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actions/AdsBoardAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/AdsBoardAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/APIConfig/dashboardService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/dashboardService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/AdminDashboardAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/AdminDashboardAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Reducers/AdminDashboardReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/AdminDashboardReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ads/AdsComponentRoot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ads/AdsComponentRoot.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Storage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Storage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/dashboard/AdminDashboardRoot.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/dashboard/AdminDashboardRoot.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../handler/adsBoard/command/adsBoardCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/adsBoard/command/adsBoardCommand.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes/AdsBoradRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/AdsBoradRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/adsBoard/query/adsBoradQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/adsBoard/query/adsBoradQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/dashboard/query/DashboardAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/dashboard/query/DashboardAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/letter/command/letterCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/letter/command/letterCommand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/letter/query/letterQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/letter/query/letterQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/pool/command/poolCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/pool/command/poolCommand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/pool/query/poolQueryAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/pool/query/poolQueryAdmin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/pool/query/poolQueryUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/pool/query/poolQueryUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/user/command/userCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/user/command/userCommand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../handler/user/query/userQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/user/query/userQuery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model/AdsBoradModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../model/AdsBoradModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model/AppSettingModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../model/AppSettingModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model/LetterModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../model/LetterModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model/PoolModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../model/PoolModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../model/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../model/UserModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../validators/userValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/../validators/userValidator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +109,10 @@
       <workItem from="1625345218982" duration="789000" />
       <workItem from="1625380999215" duration="16450000" />
       <workItem from="1625408477688" duration="4191000" />
-      <workItem from="1625419568606" duration="3211000" />
+      <workItem from="1625419568606" duration="3212000" />
+      <workItem from="1625560740130" duration="8659000" />
+      <workItem from="1625600556167" duration="566000" />
+      <workItem from="1625658601832" duration="3405000" />
     </task>
     <task id="LOCAL-00001" summary="init client">
       <created>1624970583660</created>

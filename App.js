@@ -55,6 +55,7 @@ app.use('/api/v1',require('./routes/PoolRoute'))
 app.use('/api/v1',require('./routes/AdsBoradRoute'))
 app.use('/api/v1',require('./routes/PaymentRoute'))
 app.use('/api/v1',require('./routes/DashboardRoute'))
+app.use('/api/v1',require('./routes/BuildingRoute'))
 
 
 //config other library

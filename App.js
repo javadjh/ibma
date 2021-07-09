@@ -56,6 +56,8 @@ app.use('/api/v1',require('./routes/AdsBoradRoute'))
 app.use('/api/v1',require('./routes/PaymentRoute'))
 app.use('/api/v1',require('./routes/DashboardRoute'))
 app.use('/api/v1',require('./routes/BuildingRoute'))
+app.use('/api/v1',require('./routes/EmployeeRoute'))
+app.use('/api/v1',require('./routes/BoardDirectorRoute'))
 
 
 //config other library

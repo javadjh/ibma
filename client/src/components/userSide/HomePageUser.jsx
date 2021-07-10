@@ -46,53 +46,99 @@ const HomePageUser = ({history})=>{
     }
     return(
         <Fragment>
-            <CardInformation/>
-            <AdsBoards ads={ads}/>
-            <div style={{marginTop:20}}>
-                <div style={setRowContainer}>
-                    <div style={circleBtn}  onClick={()=>{
-                        history.push("/pooluser")
-                    }}>
-                        <img style={imgCircle} src={"./assets/img/swimming.png"} />
+            <div style={{display:"flex",
+                flex:1,
+                backgroundImage: "linear-gradient(45deg, #88898d, #484848)",
+                height:"100% !important",
+                paddingBottom:90,
+                flexDirection:"column"}}>
+                <CardInformation/>
+                <AdsBoards ads={ads}/>
+                <div style={{marginTop:20}} >
+                    <div style={setRowContainer}>
+                        <div style={circleBtn}  onClick={()=>{
+                            history.push("/pooluser")
+                        }}>
+                            <img style={imgCircle} src={"./assets/img/swimming.png"} />
+                        </div>
+                        <div style={circleBtn} onClick={()=>{
+                            history.push("/usersletter")
+                        }}>
+                            <img style={imgCircle} src={"./assets/img/mail.png"} />
+                        </div>
+                        <div style={circleBtn} onClick={()=>{
+                            history.push("/userpayment")
+                        }}>
+                            <img style={imgCircle} src={"./assets/img/credit-card.png"} />
+                        </div>
                     </div>
-                    <div style={circleBtn} onClick={()=>{
-                        history.push("/usersletter")
-                    }}>
-                        <img style={imgCircle} src={"./assets/img/mail.png"} />
-                    </div>
-                    <div style={circleBtn} onClick={()=>{
-                        history.push("/userpayment")
-                    }}>
-                        <img style={imgCircle} src={"./assets/img/credit-card.png"} />
-                    </div>
-                </div>
 
-                <div style={setRowContainer}>
-                    <p style={{
-                        fontSize: 12,
-                        color:"white",
-                        flex:1,
-                        marginRight:-10
-                    }}>نوبت استخر</p>
-                    <p style={{
-                        fontSize: 12,
-                        flex:1,
-                        color:"white",
-                    }}>نامه ها</p>
-                    <p style={{
-                        fontSize: 12,
-                        flex:1,
-                        color:"white",
-                        marginLeft:10
-                    }}>پرداخت شارژ</p>
+                    <div style={setRowContainer}>
+                        <p style={{
+                            fontSize: 12,
+                            color:"white",
+                            flex:1,
+                            marginRight:-10
+                        }}>نوبت استخر</p>
+                        <p style={{
+                            fontSize: 12,
+                            flex:1,
+                            color:"white",
+                        }}>نامه ها</p>
+                        <p style={{
+                            fontSize: 12,
+                            flex:1,
+                            color:"white",
+                            marginLeft:10
+                        }}>پرداخت شارژ</p>
+                    </div>
                 </div>
+                <div >
+                    <div style={setRowContainer}>
+                        <div style={circleBtn}  onClick={()=>{
+                            history.push("/useremployee")
+                        }}>
+                            <img style={imgCircle} src={"./assets/img/employee.png"} />
+                        </div>
+                        <div style={circleBtn} onClick={()=>{
+                            history.push("/userboarddirector")
+                        }}>
+                            <img style={imgCircle} src={"./assets/img/interview.png"} />
+                        </div>
+                        <div style={circleBtn} onClick={()=>{
+                            history.push("/")
+                        }}>
+                            {/*<img style={imgCircle} src={"./assets/img/credit-card.png"} />*/}
+                        </div>
+                    </div>
+
+                    <div style={setRowContainer}>
+                        <p style={{
+                            fontSize: 12,
+                            color:"white",
+                            flex:1,
+                            marginRight:-10
+                        }}>کارمندان</p>
+                        <p style={{
+                            fontSize: 12,
+                            flex:1,
+                            color:"white",
+                        }}>هیئت مدیره</p>
+                        <p style={{
+                            fontSize: 12,
+                            flex:1,
+                            color:"white",
+                            marginLeft:10
+                        }}></p>
+                    </div>
+                </div>
+                <img style={{
+                    position:"fixed",
+                    bottom:0,
+                    maxHeight:85,
+                    width:"100%"
+                }} src={"./assets/img/foter.png"}/>
             </div>
-            <img style={{
-                position:"fixed",
-                bottom:0,
-                maxHeight:85,
-                width:"100%"
-            }} src={"./assets/img/foter.png"}/>
         </Fragment>
     )
 }

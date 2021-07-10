@@ -108,6 +108,12 @@ const AdminLayout=()=>{
                                 <NavLink className="nav-link" to={"/ads"}>
                                     <i className="ni ni-tv-2 text-primary"></i>تبلیغات
                                 </NavLink>
+                                <NavLink className="nav-link" to={"/boarddirector"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>اعضای هیئت مدیره
+                                </NavLink>
+                                <NavLink className="nav-link" to={"/employees"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>کارمندان
+                                </NavLink>
                                 {/*
                                 <NavLink className="nav-link" to={"/reportage"}>
                                     <i className="ni ni-tv-2 text-primary"></i>گزارش گیری

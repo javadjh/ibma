@@ -7,7 +7,7 @@ const {justLogin} = require("../middlewares/Auth");
 const router = express.Router()
 
 router.get("/employees",[justLogin],getEmployees)
-router.post("/insert/employees",[justLogin,adminGuard],insertEmployee)
+router.post("/insert/employee",[justLogin,adminGuard],insertEmployee)
 router.delete("/employee/:id",[justLogin,adminGuard],deleteEmployee)
 
 module.exports = router

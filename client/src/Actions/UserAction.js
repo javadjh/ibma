@@ -12,6 +12,7 @@ export const initUser=(user)=>{
             const userToken = await jsonwebtoken.decode(data.token,{complete:true})
             await dispatch({type: "INTI_USER", payload: userToken.payload})
             await localStorage.setItem("token",data.token)
+            await localStorage.setItem("usersbuilding",data.usersBuilding)
         }
     }
 }

@@ -27,16 +27,18 @@ module.exports.insertAdsBoard = async (req,res)=>{
 module.exports.deleteAdsBoard = async (req,res)=>{
     try {
         const {id} = req.params
-        console.log(id)
         if (!isValidObjectId(id)) return res.status(400).send({"error":"ای دی اشتباه میباشد"})
+        console.log(id)
+        console.log(req.headers.usersbuilding)
         const adsDeleted = await AdsBoardModel.findOneAndRemove({
-            id,
+            _id:id,
             buildingId:req.headers.usersbuilding
         })
+        console.log(adsDeleted)
         if(adsDeleted)
             res.send(adsDeleted)
         else
-            return res.send({"error":"مشکل در حذف"})
+            return res.status(400).send({"error":"مشکل در حذف"})
     }catch (err){
         console.log(err)
     }

@@ -11,6 +11,8 @@ import {UsersLetterReducer} from "./UsersLetterReducer";
 import {PaymentUserPageReducer} from "./PaymentUserPageReducer";
 import {AdminDashboardReducer} from "./AdminDashboardReducer";
 import {loadingBarReducer} from "react-redux-loading-bar";
+import {BoardDirectorsReducer} from "./BoardDirectorsReducer";
+import {EmployeeReducer} from "./EmployeeReducer";
 
 export const reducersC = combineReducers({
     user:UserReducer,
@@ -24,5 +26,7 @@ export const reducersC = combineReducers({
     usersLetter:UsersLetterReducer,
     paymentUser:PaymentUserPageReducer,
     adminDashboard:AdminDashboardReducer,
-    loadingBar:loadingBarReducer
+    loadingBar:loadingBarReducer,
+    boardDirector:BoardDirectorsReducer,
+    employee:EmployeeReducer,
 })

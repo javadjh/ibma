@@ -4,7 +4,7 @@ module.exports.getAdsBoard = async (req,res)=>{
         buildingId:req.headers.usersbuilding
     }).lean()
     adsBoard.map(ad=>{
-        ad.image = "http://192.168.1.2:1000/" + ad.image
+        ad.image = "http://192.168.1.38:1000/" + ad.image
     })
     res.send(adsBoard)
 }

@@ -59,14 +59,17 @@ module.exports.login= async (req,res)=>{
     const isPasswordValid = await bcrypt.compare(req.body.password,user.password)
     if(!isPasswordValid) return res.status(400).send({"error":"نام کاربری یا رمز عبور اشتباه میباشد"})
     try {
-        res.send({token:jwtGenerator(_.pick(user,[
+        res.send(
+            {token:jwtGenerator(_.pick(user,[
                 "isAdmin",
                 "userName",
                 "isAdmin",
                 "_id",
                 "buildings",
                 "usersBuilding"
-            ]))})
+            ]))
+            ,usersBuilding:user.usersBuilding
+            })
     }catch (err){
         console.log(err)
     }

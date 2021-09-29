@@ -2,10 +2,13 @@ import React, {useRef, useState} from 'react'
 import validator from "simple-react-validator";
 import {useDispatch} from "react-redux";
 import {addLetter} from "../../Actions/LettersAction";
+import {insertFileService} from "../../APIConfig/fileService";
+import {doneToast} from "../../utility/ShowToast";
 
 const InsertLetter = ({history,match})=>{
     const [title,setTitle] = useState('')
     const [message,setMessage] = useState('')
+    const [file,setFile] = useState('')
     const [,setValidatorValid] = useState(null)
     const userId = match.params.id
     console.log(userId)
@@ -29,13 +32,15 @@ const InsertLetter = ({history,match})=>{
                     title,
                     message,
                     target:letterTarget,
-                    userId
+                    userId,
+                    file
                 }
             }else{
                 data={
                     title,
                     message,
-                    target:letterTarget
+                    target:letterTarget,
+                    file
                 }
             }
             await dispatch(addLetter(data))
@@ -43,6 +48,15 @@ const InsertLetter = ({history,match})=>{
         }else{
             formValidator.current.showMessages()
             setValidatorValid(1)
+        }
+    }
+    const handleUploadProfile = async (e)=>{
+        const file = new FormData()
+        file.append("file",e.target.files[0])
+        const {data,status} = await insertFileService(file)
+        if(status===200){
+            doneToast("بارگذاری شد...")
+            setFile(data.fileName)
         }
     }
     return(
@@ -62,6 +76,16 @@ const InsertLetter = ({history,match})=>{
                 </div>
                 <div className="card-body">
                     <form>
+                        <label htmlFor="input-url" className="btn btn-success" style={{height:45}}>آپلود فایل برای نامه ارسالی</label>
+                        <input type="file" id="input-url"
+                               name={"imageUrl"}
+                               onChange={(e)=>{
+                                   handleUploadProfile(e)
+                               }}
+                               style={{visibility:"hidden"}}
+                               className="form-control form-control-alternative"
+                               aria-describedby="imageUrl"
+                               placeholder="لینک"/>
                         <div className="pl-lg-4">
                             <div className="form-group">
                                 <label className="form-control-label" htmlFor="input-username">عنوان</label>

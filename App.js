@@ -58,6 +58,10 @@ app.use('/api/v1',require('./routes/DashboardRoute'))
 app.use('/api/v1',require('./routes/BuildingRoute'))
 app.use('/api/v1',require('./routes/EmployeeRoute'))
 app.use('/api/v1',require('./routes/BoardDirectorRoute'))
+app.use('/api/v1',require('./routes/FileRoute'))
+app.use('/api/v1',require('./routes/ContractorRoute'))
+app.use('/api/v1',require('./routes/RulesRoute'))
+app.use('/api/v1',require('./routes/MeetingRoute'))
 
 
 //config other library

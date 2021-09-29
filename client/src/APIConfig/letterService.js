@@ -16,3 +16,6 @@ export const getUsersLetterService=(filter)=>{
         params:filter
     })
 }
+export const setSeenLetterService=(id)=>{
+    return axiosConfig.put(`${config.baseUrl}${config.setSeenLetter}${id}`)
+}

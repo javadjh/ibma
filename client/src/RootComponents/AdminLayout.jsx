@@ -114,13 +114,16 @@ const AdminLayout=()=>{
                                 <NavLink className="nav-link" to={"/employees"}>
                                     <i className="ni ni-tv-2 text-primary"></i>کارمندان
                                 </NavLink>
-                                {/*
-                                <NavLink className="nav-link" to={"/reportage"}>
-                                    <i className="ni ni-tv-2 text-primary"></i>گزارش گیری
-                                </NavLink>
                                 <NavLink className="nav-link" to={"/contractors"}>
                                     <i className="ni ni-tv-2 text-primary"></i>پیمانکاران
-                                </NavLink>*/}
+                                </NavLink>
+                                <NavLink className="nav-link" to={"/rules"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>قوانین و مقررات
+                                </NavLink>
+                                <NavLink className="nav-link" to={"/meeting"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>صورتجلسات
+                                </NavLink>
+
                             </li>
                         </ul>
                         {/*<hr className="my-3"/>

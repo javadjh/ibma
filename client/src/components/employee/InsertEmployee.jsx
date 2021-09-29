@@ -2,6 +2,9 @@ import React, {useRef, useState} from "react";
 import SimpleReactValidator from "simple-react-validator";
 import {useDispatch} from "react-redux";
 import {insertEmployeesAction} from "../../Actions/EmployeeAction";
+import {insertFileService} from "../../APIConfig/fileService";
+import {insertAdAction} from "../../Actions/AdsBoardAction";
+import {doneToast} from "../../utility/ShowToast";
 
 const InsertEmployee = ({history})=>{
     const formValidator = useRef(new SimpleReactValidator({
@@ -18,19 +21,30 @@ const InsertEmployee = ({history})=>{
     const [role,setRole] = useState('')
     const [phoneNumber,setPhoneNumber] = useState('')
     const [,setValidator] = useState(null)
+    const [profile,setProfile] = useState(null)
 
     const handleInsertEmployee = async ()=>{
-        if(formValidator.current.allValid()){
+        if(formValidator.current.allValid() && profile!==null){
             await dispatch(insertEmployeesAction({
                 name,
                 lastName,
                 role,
-                phoneNumber
+                phoneNumber,
+                profile
             }))
             history.goBack()
         }else{
             setValidator(1)
             formValidator.current.showMessages()
+        }
+    }
+    const handleUploadProfile = async (e)=>{
+        const file = new FormData()
+        file.append("file",e.target.files[0])
+        const {data,status} = await insertFileService(file)
+        if(status===200){
+            doneToast("بارگذاری شد...")
+            setProfile(data.fileName)
         }
     }
     return(
@@ -48,6 +62,21 @@ const InsertEmployee = ({history})=>{
                 </div>
                 <div className="card-body">
                     <form>
+                        <div style={{display:"flex"}}>
+                            <label htmlFor="input-url" className="btn btn-success" style={{height:45}}>آپلود تصویر برای کارمند</label>
+                            <input type="file" id="input-url"
+                                   name={"imageUrl"}
+                                   style={{visibility:"hidden"}}
+                                   onChange={(e)=>{
+                                       handleUploadProfile(e)
+                                   }}
+                                   className="form-control form-control-alternative"
+                                   aria-describedby="imageUrl"
+                                   placeholder="لینک"/>
+                            {profile?(
+                                <img style={{marginLeft:20}} width={100} height={100} src={`http://localhost:1000/${profile}`}/>
+                            ):null}
+                        </div>
                         <h6 className="heading-small text-muted mb-4">اطلاعات کاربر</h6>
                         <div className="pl-lg-4">
                             <div className="row">

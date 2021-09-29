@@ -1,4 +1,5 @@
 import React, {Fragment} from "react";
+import config from "../../APIConfig/config.json";
 
 const EmployeeTable = ({employees,handleDeleteEmployee})=>{
     return(
@@ -19,10 +20,8 @@ const EmployeeTable = ({employees,handleDeleteEmployee})=>{
                         <tr>
                             <th scope="row">
                                 <div className="media align-items-center">
-                                    <a href="#" className="avatar rounded-circle ml-3">
-                                        {(index+1)}
-                                    </a>
-                                    <div className="media-body">
+                                    <img src={`${config.ip}${employee.profile}`} width={50} height={50} style={{borderRadius:80}}/>
+                                    <div className="media-body mr-3">
                                         <span className="mb-0 text-sm">{`${employee.name} ${employee.lastName}`}</span>
                                     </div>
                                 </div>

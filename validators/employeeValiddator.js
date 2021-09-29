@@ -7,7 +7,8 @@ module.exports.insertEmployeeValidator = (date)=>{
         lastName:Joi.string().min(4).required(),
         role:Joi.string().required(),
         phoneNumber:Joi.string().required().min(10).max(12),
-        buildingId:Joi.objectId()
+        buildingId:Joi.objectId(),
+        profile:Joi.string().required(),
     })
     return validator.validate(date)
 }

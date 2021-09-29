@@ -9,6 +9,7 @@ module.exports.insertLetter = async (req,res)=>{
         target ,
         message ,
         createDate ,
+        file,
         userId} = req.body
     if (target==="user"){
         if(userId===undefined || !mongoose.isValidObjectId(userId)){
@@ -23,6 +24,7 @@ module.exports.insertLetter = async (req,res)=>{
         message,
         createDate,
         userId,
+        file,
         buildingId:req.headers.usersbuilding
     })
     newLetter = await newLetter.save()

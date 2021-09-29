@@ -6,6 +6,7 @@ module.exports.insertLetterValidator = (data)=>{
         title:Joi.string().required().min(3).max(250),
         target:Joi.string().valid("user","all").required(),
         message:Joi.string().required().min(5),
+        file:Joi.string(),
         userId: Joi.objectId(),
     })
     return validator.validate(data)

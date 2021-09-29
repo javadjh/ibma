@@ -24,6 +24,10 @@ const EmployeeSchema = new mongoose.Schema({
         required:[true,"ساختمان اجباری میباشد"],
         type:mongoose.Types.ObjectId,
         ref:"building"
+    },
+    profile:{
+        type:String,
+        required:true
     }
 })
 

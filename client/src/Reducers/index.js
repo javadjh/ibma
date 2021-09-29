@@ -13,6 +13,10 @@ import {AdminDashboardReducer} from "./AdminDashboardReducer";
 import {loadingBarReducer} from "react-redux-loading-bar";
 import {BoardDirectorsReducer} from "./BoardDirectorsReducer";
 import {EmployeeReducer} from "./EmployeeReducer";
+import {ContractorReducer} from "./ContractorsReducer";
+import {RulesReducer} from "./RulesReducer";
+import {RuleReducer} from "./RuleReducer";
+import {MeetingsReducer} from "./MeetingsReducer";
 
 export const reducersC = combineReducers({
     user:UserReducer,
@@ -29,4 +33,8 @@ export const reducersC = combineReducers({
     loadingBar:loadingBarReducer,
     boardDirector:BoardDirectorsReducer,
     employee:EmployeeReducer,
+    contractors:ContractorReducer,
+    rules:RulesReducer,
+    rule:RuleReducer,
+    meetings:MeetingsReducer,
 })

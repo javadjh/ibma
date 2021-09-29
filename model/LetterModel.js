@@ -32,6 +32,12 @@ const LetterSchema = new mongoose.Schema({
         required:[true,"ساختمان اجباری میباشد"],
         type:mongoose.Types.ObjectId,
         ref:"building"
+    },
+    file:{
+        type:String
+    },
+    seen:{
+        type:[mongoose.Types.ObjectId],
     }
 })
 

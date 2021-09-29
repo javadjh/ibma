@@ -106,9 +106,9 @@ const HomePageUser = ({history})=>{
                             <img style={imgCircle} src={"./assets/img/interview.png"} />
                         </div>
                         <div style={circleBtn} onClick={()=>{
-                            history.push("/")
+                            history.push("/usercontractor")
                         }}>
-                            {/*<img style={imgCircle} src={"./assets/img/credit-card.png"} />*/}
+                            <img style={imgCircle} src={"./assets/img/worker.png"} />
                         </div>
                     </div>
 
@@ -129,15 +129,55 @@ const HomePageUser = ({history})=>{
                             flex:1,
                             color:"white",
                             marginLeft:10
+                        }}>پیمانکاران</p>
+
+                    </div>
+                </div>
+                <div >
+                    <div style={setRowContainer}>
+                        <div style={circleBtn}  onClick={()=>{
+                            history.push("/userrule")
+                        }}>
+                            <img style={imgCircle} src={"./assets/img/compliant.png"} />
+                        </div>
+                        <div style={circleBtn} onClick={()=>{
+                            history.push("/usersletter")
+                        }}>
+                            <img style={imgCircle} src={"./assets/img/mail.png"} />
+                        </div>
+                        <div style={circleBtn} onClick={()=>{
+                            history.push("/userpayment")
+                        }}>
+                            <img style={imgCircle} src={"./assets/img/credit-card.png"} />
+                        </div>
+                    </div>
+
+                    <div style={setRowContainer}>
+                        <p style={{
+                            fontSize: 12,
+                            color:"white",
+                            flex:1,
+                            marginRight:-10
+                        }}>قوانین و مقررات</p>
+                        <p style={{
+                            fontSize: 12,
+                            flex:1,
+                            color:"white",
+                        }}></p>
+                        <p style={{
+                            fontSize: 12,
+                            flex:1,
+                            color:"white",
+                            marginLeft:10
                         }}></p>
                     </div>
                 </div>
-                <img style={{
+                {/*<img style={{
                     position:"fixed",
                     bottom:0,
                     maxHeight:85,
                     width:"100%"
-                }} src={"./assets/img/foter.png"}/>
+                }} src={"./assets/img/foter.png"}/>*/}
             </div>
         </Fragment>
     )

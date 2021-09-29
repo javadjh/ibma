@@ -5,35 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b3316f0-a698-4abe-9b03-8e34b2391882" name="Default Changelist" comment="add toast , Loading , dashboard (ui and backend)">
-      <change afterPath="$PROJECT_DIR$/src/APIConfig/boardDirectorService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/APIConfig/employeeService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Actions/BoardDireactorAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Actions/EmployeeAction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Reducers/BoardDirectorsReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Reducers/EmployeeReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/boarddirector/BoardDirectorRoot.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/boarddirector/BoardDirectorTable.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/boarddirector/InsertBoardDirector.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/employee/EmployeeRoot.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/employee/EmployeeTable.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/employee/InsertEmployee.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userSide/userBoardDirector/BoardDirectorListComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userSide/userBoardDirector/UserBoardDirectorRoot.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userSide/userEmployee/EmployeeListComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/userSide/userEmployee/UserEmployeeRoot.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/APIConfig/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/APIConfig/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actions/AdsBoardAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/AdsBoardAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Actions/UserAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/UserAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RootComponents/AdminLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/AdminLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/RootComponents/RootComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Storage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Storage/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/userSide/HomePageUser.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../handler/adsBoard/command/adsBoardCommand.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/adsBoard/command/adsBoardCommand.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../handler/adsBoard/query/adsBoradQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/adsBoard/query/adsBoradQuery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../handler/user/query/userQuery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../handler/user/query/userQuery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes/EmployeeRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/EmployeeRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +25,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/img/brand" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../football/mobile" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -115,6 +87,17 @@
       <workItem from="1625823492155" duration="7530000" />
       <workItem from="1625905075777" duration="7351000" />
       <workItem from="1625912765353" duration="1387000" />
+      <workItem from="1626112341806" duration="815000" />
+      <workItem from="1626156421372" duration="916000" />
+      <workItem from="1626543593690" duration="32000" />
+      <workItem from="1629120379670" duration="1384000" />
+      <workItem from="1629226544953" duration="2601000" />
+      <workItem from="1629274855326" duration="4312000" />
+      <workItem from="1629367109224" duration="609000" />
+      <workItem from="1629382084800" duration="14000" />
+      <workItem from="1629653350737" duration="1140000" />
+      <workItem from="1629664525440" duration="798000" />
+      <workItem from="1629757734030" duration="1386000" />
     </task>
     <task id="LOCAL-00001" summary="init client">
       <created>1624970583660</created>

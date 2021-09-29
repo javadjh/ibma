@@ -54,7 +54,9 @@ module.exports.getUsersLetter = async (req,res)=>{
     }).count()
     console.log(total)
 
-    letters.map(v=>v.createDate=convertToShamsi(v.createDate))
+    letters.map(v=>{
+        v.createDate=convertToShamsi(v.createDate)
+    })
 
     res.send({
         pageId:pId,
@@ -62,4 +64,21 @@ module.exports.getUsersLetter = async (req,res)=>{
         total,
         letters
     })
+}
+module.exports.setUserLetterSeen = async (req,res)=>{
+    let singleLetter = await LetterModel.findOne({
+        _id:req.params.id
+    })
+    let isFind = false
+    for (let i = 0 ; i<singleLetter.seen.length ; i++){
+        if(singleLetter.seen[i]==req.user._id)
+            isFind = true
+    }
+    if(!isFind){
+        singleLetter.seen.push(req.user._id)
+    }
+
+    await singleLetter.save()
+    res.send(true)
+
 }

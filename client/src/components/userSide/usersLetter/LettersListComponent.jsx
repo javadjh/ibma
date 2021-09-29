@@ -20,14 +20,14 @@ const cardShadow={
     paddingTop:5,
     paddingBottom:5
 }
-const LettersListComponent = ({isLoaded,usersLetterState,})=>{
+const LettersListComponent = ({isLoaded,usersLetterState,handleShowLetterDetail,topFunction})=>{
     return(
         <div>
             {isLoaded?usersLetterState.map(letter=>(
                 <div style={cardShadow}>
                     <a style={{display:"block",marginTop:10,fontSize:16,fontWeight:"bold"}}>{`عنوان : ${letter.title}`}</a>
                     <a style={{display:"block",marginTop:5}}>{`تاریخ انتشار : ${letter.createDate}`}</a>
-                    <a style={{display:"block",marginTop:5 ,marginBottom:10}}>{`متن : ${letter.message}`}</a>
+                    {/*<a style={{display:"block",marginTop:5 ,marginBottom:10}}>{`متن : ${letter.message}`}</a>*/}
                     {letter.target==="user"?(
                         <div>
                             <hr/>
@@ -35,6 +35,11 @@ const LettersListComponent = ({isLoaded,usersLetterState,})=>{
                         </div>
 
                     ):null}
+
+                    <p style={{color:"#2151e5",marginBottom:1,marginTop:5}} onClick={(e)=> {
+                        handleShowLetterDetail(letter)
+                        topFunction()
+                    }}>بیشتر...</p>
                 </div>
             )):null}
         </div>

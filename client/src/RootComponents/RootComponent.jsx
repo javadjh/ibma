@@ -23,6 +23,14 @@ import EmployeeRoot from "../components/employee/EmployeeRoot";
 import InsertEmployee from "../components/employee/InsertEmployee";
 import UserEmployeeRoot from "../components/userSide/userEmployee/UserEmployeeRoot";
 import UserBoardDirectorRoot from "../components/userSide/userBoardDirector/UserBoardDirectorRoot";
+import ContractorRoot from "../components/contractor/ContractorRoot";
+import InsertContractor from "../components/contractor/InsertContractor";
+import UserContractorRoot from "../components/userSide/userContractor/UserContractorRoot";
+import RulesRoot from "../components/rules/RulesRoot";
+import UpsertRule from "../components/rules/UpsertRule";
+import UserRulesRoot from "../components/userSide/userRule/UserRulesRoot";
+import MeetingRoot from "../components/meeting/MeetingRoot";
+import InsertMeetingComponent from "../components/meeting/InsertMeetingComponent";
 
 const RootComponent = ({history})=>{
     const containerUserSide = {
@@ -38,7 +46,8 @@ const RootComponent = ({history})=>{
             <ToastContainer/>
             <Switch>
                 <Route path={["/adminlogin","/users","/upsert/user","/upsert/user/:id","/letters","/insert/letter",
-                    "/insert/letter/:id","/pools","/admin","/ads","/insert/ads","/boarddirector","/insert/boarddirector","/employees","/insert/employee"]}>
+                    "/insert/letter/:id","/pools","/admin","/ads","/insert/ads","/boarddirector","/insert/boarddirector",
+                    "/employees","/insert/employee","/contractors","/insert/contractor","/rules","/upsert/rule","/meeting","/insert/meeting"]}>
                     {history.location.pathname!=="/adminlogin" ?(
                         <AdminLayout/>
                     ):null}
@@ -74,12 +83,22 @@ const RootComponent = ({history})=>{
 
                                     <Route path={"/employees"} component={EmployeeRoot} exact/>
                                     <Route path={"/insert/employee"} component={InsertEmployee} exact/>
+
+
+                                    <Route path={"/contractors"} component={ContractorRoot} exact/>
+                                    <Route path={"/insert/contractor"} component={InsertContractor} exact/>
+
+                                    <Route path={"/rules"} component={RulesRoot} exact/>
+                                    <Route path={"/upsert/rule"} component={UpsertRule} exact/>
+
+                                    <Route path={"/meeting"} component={MeetingRoot} exact/>
+                                    <Route path={"/insert/meeting"} component={InsertMeetingComponent} exact/>
                                 </Switch>
                             </div>
                         </div>
                     </div>
                 </Route>
-                <Route path={["/","/userlogin","/pooluser","/usersletter","/userpayment","/userlogin","/useremployee","/userboarddirector"]}>
+                <Route path={["/","/userlogin","/pooluser","/usersletter","/userpayment","/userlogin","/useremployee","/userboarddirector","/usercontractor","/userrule"]}>
                     <div style={containerUserSide}>
                         <LoadingBar style={{
                             backgroundColor:"black",
@@ -96,6 +115,8 @@ const RootComponent = ({history})=>{
                             <Route path={"/userlogin"} component={UserLoginRoot} exact/>
                             <Route path={"/useremployee"} component={UserEmployeeRoot} exact/>
                             <Route path={"/userboarddirector"} component={UserBoardDirectorRoot} exact/>
+                            <Route path={"/usercontractor"} component={UserContractorRoot} exact/>
+                            <Route path={"/userrule"} component={UserRulesRoot} exact/>
                         </Switch>
                     </div>
                 </Route>

@@ -96,6 +96,7 @@ const AdminDashboardRoot = ()=>{
                                 }}>
                                     {buildings.map(building=>(
                                         <div className={"card shadow"} style={cardStyleTurn}>
+                                            <a style={{color:"green",cursor:"pointer",fontSize:14}}>ثبت تصویر برای برج</a>
                                             <a style={aStyle}>{`${building.title}`}</a>
                                             <a onClick={()=>{
                                                 handleChangeBuildingSetting(building._id)

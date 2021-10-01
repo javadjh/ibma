@@ -4,8 +4,8 @@ module.exports.getAllMeeting = async (req,res)=>{
     let {pageId,eachPerPage} = req.query
     pageId = parseInt(pageId)
     eachPerPage = parseInt(eachPerPage)
-    let meetings = await MeetingModel.find().skip((pageId-1)*eachPerPage).limit(eachPerPage).sort({createDate:-1}).lean()
-    let total = await MeetingModel.find().count()
+    let meetings = await MeetingModel.find({buildingId:req.headers.usersbuilding,}).skip((pageId-1)*eachPerPage).limit(eachPerPage).sort({createDate:-1}).lean()
+    let total = await MeetingModel.find({buildingId:req.headers.usersbuilding,}).count()
     meetings.map(m=>{m.date = convertToShamsi(m.date)})
     res.send({
         pageId,

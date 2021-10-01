@@ -18,7 +18,12 @@ const RuleSchema = new mongoose.Schema({
     createDate:{
         type:Date,
         default:Date.now,
-    }
+    },
+    buildingId:{
+        required:true,
+        type:mongoose.Types.ObjectId,
+        ref:"building"
+    },
 })
 const RuleModel = mongoose.model("rules",RuleSchema)
 module.exports = RuleModel

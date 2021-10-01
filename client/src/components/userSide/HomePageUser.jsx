@@ -141,9 +141,9 @@ const HomePageUser = ({history})=>{
                             <img style={imgCircle} src={"./assets/img/compliant.png"} />
                         </div>
                         <div style={circleBtn} onClick={()=>{
-                            history.push("/usersletter")
+                            history.push("/usergallery")
                         }}>
-                            <img style={imgCircle} src={"./assets/img/mail.png"} />
+                            <img style={imgCircle} src={"./assets/img/gallery.png"} />
                         </div>
                         <div style={circleBtn} onClick={()=>{
                             history.push("/userpayment")
@@ -163,7 +163,7 @@ const HomePageUser = ({history})=>{
                             fontSize: 12,
                             flex:1,
                             color:"white",
-                        }}></p>
+                        }}>تصاویر و ویدیو ها</p>
                         <p style={{
                             fontSize: 12,
                             flex:1,

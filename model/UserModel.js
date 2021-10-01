@@ -53,7 +53,11 @@ const UserSchema = new mongoose.Schema({
         type:mongoose.Types.ObjectId,
         ref:"building"
     },
-
+    role:{
+        type:String,
+        enum:['resident','headHousehold','owner','admin'],
+        required:true
+    }
 
 })
 

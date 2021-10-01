@@ -26,7 +26,12 @@ const MeetingSchema = new mongoose.Schema({
     },
     file:{
         type:String,
-    }
+    },
+    buildingId:{
+        required:true,
+        type:mongoose.Types.ObjectId,
+        ref:"building"
+    },
 })
 const MeetingModel = mongoose.model("meeting",MeetingSchema)
 module.exports = MeetingModel

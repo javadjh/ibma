@@ -123,6 +123,12 @@ const AdminLayout=()=>{
                                 <NavLink className="nav-link" to={"/meeting"}>
                                     <i className="ni ni-tv-2 text-primary"></i>صورتجلسات
                                 </NavLink>
+                                <NavLink className="nav-link" to={"/residential/units"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>واحد ها
+                                </NavLink>
+                                <NavLink className="nav-link" to={"/bills"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>قبض ها
+                                </NavLink>
 
                             </li>
                         </ul>

@@ -66,7 +66,9 @@ module.exports.login= async (req,res)=>{
                 "isAdmin",
                 "_id",
                 "buildings",
-                "usersBuilding"
+                "usersBuilding",
+                "role",
+                "homeNumber",
             ]))
             ,usersBuilding:user.usersBuilding
             })

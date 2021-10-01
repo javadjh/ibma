@@ -3,6 +3,7 @@ import SearchingComponent from "../utilityComponent/SearchingComponent";
 import {useDispatch, useSelector} from "react-redux";
 import {addBuilding, getAdminDashboardAction, updateAppSetting} from "../../Actions/AdminDashboardAction";
 import LoadingBar, {hideLoading, showLoading} from "react-redux-loading-bar";
+import {Link} from "react-router-dom";
 const cardStyleTurn = {
     paddingTop: 10,
     flex:1,
@@ -96,7 +97,7 @@ const AdminDashboardRoot = ()=>{
                                 }}>
                                     {buildings.map(building=>(
                                         <div className={"card shadow"} style={cardStyleTurn}>
-                                            <a style={{color:"green",cursor:"pointer",fontSize:14}}>ثبت تصویر برای برج</a>
+                                            <Link to={`/gallery/${building._id}`} style={{color:"green",cursor:"pointer",fontSize:14}}>ثبت تصویر برای برج</Link>
                                             <a style={aStyle}>{`${building.title}`}</a>
                                             <a onClick={()=>{
                                                 handleChangeBuildingSetting(building._id)

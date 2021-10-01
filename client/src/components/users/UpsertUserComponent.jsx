@@ -21,6 +21,7 @@ const UpsertUserComponent = ({history,match})=>{
     const [lastName,setLastName] = useState("")
     const [homeNumber,setHomeNumber] = useState("")
     const [password,setPassword] = useState("")
+    const [role,setRole] = useState("")
     const [,setValidat] = useState(null)
     const user = useSelector(state => state.singleUser)
     console.log("**************************************************")
@@ -35,7 +36,8 @@ const UpsertUserComponent = ({history,match})=>{
                     name,
                     lastName,
                     homeNumber,
-                    password
+                    password,
+                    role
                 }
             } else {
                 user = {
@@ -45,6 +47,7 @@ const UpsertUserComponent = ({history,match})=>{
                     name,
                     lastName,
                     homeNumber,
+                    role
                 }
             }
             await dispatch(upsertUser(user))
@@ -67,6 +70,7 @@ const UpsertUserComponent = ({history,match})=>{
             setName(user.name)
             setLastName(user.lastName)
             setHomeNumber(user.homeNumber)
+            setRole(user.role)
         }
     },[user])
 
@@ -94,6 +98,28 @@ const UpsertUserComponent = ({history,match})=>{
                 </div>
                 <div className="card-body">
                     <form>
+                        <div style={{display:"flex"}} className={"mr-3 mt-2"}>
+                            <div className="custom-control custom-radio mb-3">
+                                <input name="custom-radio-1" className="custom-control-input" id="customRadio1" type="radio" onClick={()=>{
+                                    setRole("resident")
+                                }}/>
+                                <label className="custom-control-label" htmlFor="customRadio1">ساکنین</label>
+                            </div>
+                            <div className="custom-control custom-radio mb-3 mr-3">
+                                <input name="custom-radio-1" className="custom-control-input" id="customRadio3"
+                                       type="radio" onClick={()=>{
+                                    setRole("headHousehold")
+                                }}/>
+                                <label className="custom-control-label" htmlFor="customRadio3">سرپرست</label>
+                            </div>
+                            <div className="custom-control custom-radio mb-3 mr-3">
+                                <input name="custom-radio-1" className="custom-control-input" id="customRadio2"
+                                       type="radio" onClick={()=>{
+                                    setRole("owner")
+                                }}/>
+                                <label className="custom-control-label" htmlFor="customRadio2">مالک</label>
+                            </div>
+                        </div>
                         <h6 className="heading-small text-muted mb-4">اطلاعات کاربر</h6>
                         <div className="pl-lg-4">
                             <div className="row">

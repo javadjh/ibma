@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import UsersTable from "../users/UsersTable";
-const SearchingSimpleInput = ({onSearching})=>{
+const SearchingSimpleInput = ({onSearching , hint = "عنون را جهت جست و جو وارد نمایید...",title="جست و جوی عنوان نامه"})=>{
     const [userNameSearch,setUserNameSearch] = useState("")
     return(
         <div className="row mb-3" >
@@ -12,13 +12,13 @@ const SearchingSimpleInput = ({onSearching})=>{
                                 <div className="row">
                                     <div className="col-lg-10">
                                         <div className="form-group">
-                                            <label className="form-control-label" htmlFor="input-username">جست و جوی عنوان نامه</label>
+                                            <label className="form-control-label" htmlFor="input-username">{title}</label>
                                             <input type="text" id="input-username"
                                                    onChange={(e)=>{
                                                        setUserNameSearch(e.target.value)
                                                    }}
                                                    className="form-control form-control-alternative"
-                                                   placeholder="عنون را جهت جست و جو وارد نمایید..."/>
+                                                   placeholder={hint}/>
                                         </div>
                                     </div>
 
@@ -29,7 +29,7 @@ const SearchingSimpleInput = ({onSearching})=>{
                                             <div className="col-4 text-left">
                                                 <a onClick={()=>{
                                                     onSearching(userNameSearch)
-                                                }} style={{color:"white"}} className="btn btn-sm btn-dark p-3">جست و جو</a>
+                                                }} style={{color:"white",marginTop:8}} className="btn btn-sm btn-dark p-3">جست و جو</a>
                                             </div>
                                         </div>
                                     </div>

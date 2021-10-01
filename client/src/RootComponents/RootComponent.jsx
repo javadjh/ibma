@@ -31,6 +31,12 @@ import UpsertRule from "../components/rules/UpsertRule";
 import UserRulesRoot from "../components/userSide/userRule/UserRulesRoot";
 import MeetingRoot from "../components/meeting/MeetingRoot";
 import InsertMeetingComponent from "../components/meeting/InsertMeetingComponent";
+import GalleryRoot from "../components/gallery/GalleryRoot";
+import UserGalleryRoot from "../components/userSide/userGalley/UserGalleryRoot";
+import ResidentialUnitsRoot from "../components/residentialUnit/ResidentialUnitsRoot";
+import UpsertResidentialUnit from "../components/residentialUnit/UpsertResidentialUnit";
+import BillRoot from "../components/bill/BillRoot";
+import UpsertBillComponent from "../components/bill/UpsertBillComponent";
 
 const RootComponent = ({history})=>{
     const containerUserSide = {
@@ -47,7 +53,8 @@ const RootComponent = ({history})=>{
             <Switch>
                 <Route path={["/adminlogin","/users","/upsert/user","/upsert/user/:id","/letters","/insert/letter",
                     "/insert/letter/:id","/pools","/admin","/ads","/insert/ads","/boarddirector","/insert/boarddirector",
-                    "/employees","/insert/employee","/contractors","/insert/contractor","/rules","/upsert/rule","/meeting","/insert/meeting"]}>
+                    "/employees","/insert/employee","/contractors","/insert/contractor","/rules","/upsert/rule","/meeting","/insert/meeting",
+                    "/gallery/:id","/residential/units","/upsert/residential/unit","/bills","/upsert/bill"]}>
                     {history.location.pathname!=="/adminlogin" ?(
                         <AdminLayout/>
                     ):null}
@@ -93,12 +100,21 @@ const RootComponent = ({history})=>{
 
                                     <Route path={"/meeting"} component={MeetingRoot} exact/>
                                     <Route path={"/insert/meeting"} component={InsertMeetingComponent} exact/>
+
+                                    <Route path={"/gallery/:id"} component={GalleryRoot} exact/>
+
+                                    <Route path={"/residential/units"} component={ResidentialUnitsRoot} exact/>
+                                    <Route path={"/upsert/residential/unit"} component={UpsertResidentialUnit} exact/>
+
+                                    <Route path={"/bills"} component={BillRoot} exact/>
+                                    <Route path={"/upsert/bill"} component={UpsertBillComponent} exact/>
                                 </Switch>
                             </div>
                         </div>
                     </div>
                 </Route>
-                <Route path={["/","/userlogin","/pooluser","/usersletter","/userpayment","/userlogin","/useremployee","/userboarddirector","/usercontractor","/userrule"]}>
+                <Route path={["/","/userlogin","/pooluser","/usersletter","/userpayment","/userlogin",
+                    "/useremployee","/userboarddirector","/usercontractor","/userrule","/usergallery"]}>
                     <div style={containerUserSide}>
                         <LoadingBar style={{
                             backgroundColor:"black",
@@ -117,6 +133,7 @@ const RootComponent = ({history})=>{
                             <Route path={"/userboarddirector"} component={UserBoardDirectorRoot} exact/>
                             <Route path={"/usercontractor"} component={UserContractorRoot} exact/>
                             <Route path={"/userrule"} component={UserRulesRoot} exact/>
+                            <Route path={"/usergallery"} component={UserGalleryRoot} exact/>
                         </Switch>
                     </div>
                 </Route>

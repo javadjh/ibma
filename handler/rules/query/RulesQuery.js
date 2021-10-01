@@ -1,6 +1,8 @@
 const RuleModel = require("../../../model/RuleModel");
 module.exports.getAllRules = async (req,res)=>{
-    let rules = await RuleModel.find().sort({createDate:-1})
+    let rules = await RuleModel.find({
+        buildingId:req.headers.usersbuilding,
+    }).sort({createDate:-1})
     res.send(rules)
 }
 module.exports.getSingleRules = async (req,res)=>{

@@ -17,6 +17,11 @@ import {ContractorReducer} from "./ContractorsReducer";
 import {RulesReducer} from "./RulesReducer";
 import {RuleReducer} from "./RuleReducer";
 import {MeetingsReducer} from "./MeetingsReducer";
+import {GalleryReducer} from "./GalleryReducer";
+import {ResidentialUnitsReducer} from "./ResidentialUnitsReducer";
+import {ResidentialUnitReducer} from "./ResidentialUnitReducer";
+import {BillsReducer} from "./BillsReducer";
+import {BillReducer} from "./BillReducer";
 
 export const reducersC = combineReducers({
     user:UserReducer,
@@ -37,4 +42,9 @@ export const reducersC = combineReducers({
     rules:RulesReducer,
     rule:RuleReducer,
     meetings:MeetingsReducer,
+    gallery:GalleryReducer,
+    residentialUnits:ResidentialUnitsReducer,
+    residentialUnit:ResidentialUnitReducer,
+    bills:BillsReducer,
+    bill:BillReducer,
 })

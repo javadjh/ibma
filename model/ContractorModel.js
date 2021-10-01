@@ -27,7 +27,12 @@ const ContractorSchema = new mongoose.Schema({
     profile:{
         required:true,
         type:String
-    }
+    },
+    buildingId:{
+        required:true,
+        type:mongoose.Types.ObjectId,
+        ref:"building"
+    },
 })
 const ContractorModel = mongoose.model("contractor",ContractorSchema)
 module.exports = ContractorModel

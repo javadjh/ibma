@@ -32,5 +32,12 @@
   "deleteRule": "/rule/",
   "upsertRule": "/upsert/rule",
   "meetings": "/meetings",
-  "insertMeetings": "/insert/meeting"
+  "insertMeetings": "/insert/meeting",
+  "gallery": "/gallery/",
+  "usersBuildingGallery": "/building/gallery/user",
+  "insertGallery": "/insert/gallery",
+  "residentialUnits": "/residential/units",
+  "upsertResidentialUnit": "/upsert/residential/unit",
+  "bills": "/bills",
+  "upsertBill": "/upsert/bill"
 }

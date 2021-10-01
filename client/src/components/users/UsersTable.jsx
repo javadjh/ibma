@@ -27,7 +27,8 @@ const UsersTable = ({users,handelPaging,handleDeleteUser,handelEditUser,history,
                                                         {(index+users.pageId*users.eachPerPage-users.eachPerPage+1)}
                                                     </a>
                                                     <div className="media-body">
-                                                        <span className="mb-0 text-sm">{`${user.name} ${user.lastName}`}</span>
+                                                        <span className="mb-0 text-sm">{`${user.name} ${user.lastName} `}</span>
+                                                        <span className="mb-0 text-sm" style={{color:"red"}}>{user.role==="owner"?"مالک":user.role==="headHousehold"?"سرپرست":user.role==="resident"?"ساکن":"ثبت نشده"}</span>
                                                     </div>
                                                 </div>
                                             </th>

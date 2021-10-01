@@ -9,6 +9,7 @@ module.exports.insertUserValidator=(data)=>{
         homeNumber:Joi.number().required(),
         userName:Joi.string().min(2).max(50),
         password:Joi.string().min(8).max(50).required(),
+        role:Joi.string().required().valid("resident","headHousehold","owner","admin"),
     })
     return isUserValid.validate(data)
 }
@@ -21,6 +22,7 @@ module.exports.updateUserValidator=(data)=>{
         homeNumber:Joi.number(),
         userName:Joi.string().min(2).max(50),
         id:Joi.string().required(),
+        role:Joi.string().required().valid("resident","headHousehold","owner","admin"),
     })
     return isUserValid.validate(data)
 }

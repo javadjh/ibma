@@ -18,6 +18,7 @@ module.exports.upsertUser = async (req,res)=>{
                 "isAdmin",
                 "homeNumber",
                 "userName",
+                "role"
             ])
         },{new:true})
         updatedUser = await updatedUser.save()
@@ -36,6 +37,7 @@ module.exports.upsertUser = async (req,res)=>{
             homeNumber:req.body.homeNumber,
             userName:req.body.userName,
             password,
+            role:req.body.role,
             usersBuilding:req.headers.usersbuilding
         })
         newUser = await newUser.save()
@@ -46,7 +48,8 @@ module.exports.upsertUser = async (req,res)=>{
             "phoneNumber",
             "homeNumber",
             "userName",
-            "usersBuilding"
+            "usersBuilding",
+            "role"
         ]))
     }
 }

@@ -5,8 +5,8 @@ import {insertFileService} from "../../APIConfig/fileService";
 import {doneToast} from "../../utility/ShowToast";
 import {upsertRuleService} from "../../APIConfig/rulesService";
 import {DatePicker} from "react-persian-datepicker";
-import moment from "moment-jalaali";
 import {upsertBillService} from "../../APIConfig/BillsService";
+import moment from "moment-jalaali";
 let styles = {
     calendarContainer: "calendarContainer",
     dayPickerContainer: "dayPickerContainer",

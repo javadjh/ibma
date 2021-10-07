@@ -129,6 +129,18 @@ const AdminLayout=()=>{
                                 <NavLink className="nav-link" to={"/bills"}>
                                     <i className="ni ni-tv-2 text-primary"></i>قبض ها
                                 </NavLink>
+                                <NavLink className="nav-link" to={"/rebuilding"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>بازسازی
+                                </NavLink>
+                                <NavLink className="nav-link" to={"/moving"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>اسباب کشی
+                                </NavLink>
+                                <NavLink className="nav-link" to={"/business/information"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>شماره تلفن های مورد نیاز
+                                </NavLink>
+                                <NavLink className="nav-link" to={"/surveys"}>
+                                    <i className="ni ni-tv-2 text-primary"></i>نظرسنجی
+                                </NavLink>
 
                             </li>
                         </ul>

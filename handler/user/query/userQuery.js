@@ -82,3 +82,15 @@ module.exports.autoComplete = async (req,res)=>{
     const allUsers = await UserModel.find().select("_id userName")
     res.send(allUsers)
 }
+
+module.exports.getUsersHomeNumber = async (req,res)=>{
+    let userName = req.user.userName
+    let homeNumbers = await UserModel.find({
+        userName:new RegExp(userName)
+    }).select("homeNumber -_id").lean()
+    let homeNumbersString = []
+    for (let i = 0 ; i<homeNumbers.length ; i++){
+        homeNumbersString.push(homeNumbers[i].homeNumber)
+    }
+    res.send(homeNumbersString)
+}

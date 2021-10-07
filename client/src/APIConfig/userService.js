@@ -20,3 +20,7 @@ export const deleteUserService=(id)=>{
 export const singleUserService=(id)=>{
     return axiosConfig.get(`${config.baseUrl}${config.deleteUser}${id}`,)
 }
+
+export const getUsersHomeNumbersService=()=>{
+    return axiosConfig.get(`${config.baseUrl}${config.usersHomeNumber}`)
+}

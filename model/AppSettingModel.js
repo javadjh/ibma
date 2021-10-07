@@ -13,6 +13,10 @@ const AppSettingSchema = new mongoose.Schema({
         required:[true,"ساختمان اجباری میباشد"],
         type:mongoose.Types.ObjectId,
         ref:"building"
+    },
+    notes:{
+        type:String,
+        required:true
     }
 })
 

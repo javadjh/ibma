@@ -17,6 +17,7 @@ const BillRoot = ({history})=>{
         await dispatch(getBillsAction({
             pageId,
             eachPerPage: 10,
+            searchValue
         }))
         setIsDataLoaded(true)
 

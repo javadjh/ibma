@@ -1,4 +1,5 @@
 const express = require('express')
+const {getUsersHomeNumber} = require("../handler/user/query/userQuery");
 const {autoComplete} = require("../handler/user/query/userQuery");
 const {getUser} = require("../handler/user/command/userCommand");
 const {adminGuard} = require("../middlewares/Auth");
@@ -15,5 +16,7 @@ route.post("/upsert/user",[justLogin,adminGuard],upsertUser)
 route.delete("/user/:id",[justLogin,adminGuard],deleteUser)
 route.get("/user/:id",[justLogin,adminGuard],getUser)
 route.post("/login",login)
+//user
+route.get("/users/homenumber",[justLogin],getUsersHomeNumber)
 
 module.exports = route

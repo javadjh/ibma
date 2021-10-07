@@ -1,6 +1,6 @@
 {
-  "baseUrl": "http://192.168.1.36:1000/api/v1",
-  "ip": "http://192.168.1.36:1000/",
+  "baseUrl": "http://192.168.1.35:1000/api/v1",
+  "ip": "http://192.168.1.35:1000/",
   "login": "/login",
   "users": "/users",
   "upsertUser": "/upsert/user",
@@ -39,5 +39,17 @@
   "residentialUnits": "/residential/units",
   "upsertResidentialUnit": "/upsert/residential/unit",
   "bills": "/bills",
-  "upsertBill": "/upsert/bill"
+  "upsertBill": "/upsert/bill",
+  "usersBills": "/bills/user",
+  "notesUsers": "/notes/users",
+  "usersHomeNumber": "/users/homenumber",
+  "usersRebuilding": "/users/rebuilding",
+  "insertRebuilding": "/insert/rebuilding",
+  "insertMoving": "/insert/moving",
+  "getUsersMoving": "/users/moving",
+  "getAdminRebuilding": "/rebuilding",
+  "getAdminMoving": "/moving",
+  "getBusinessInformation": "/business/information",
+  "upsertBusinessInformation": "/upsert/business/information",
+  "getAdminSurveys": "/surveys"
 }

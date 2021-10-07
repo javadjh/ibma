@@ -65,6 +65,10 @@ app.use('/api/v1',require('./routes/MeetingRoute'))
 app.use('/api/v1',require('./routes/GalleryRoute'))
 app.use('/api/v1',require('./routes/ResidentialRoute'))
 app.use('/api/v1',require('./routes/BillRoute'))
+app.use('/api/v1',require('./routes/RebuildingRoute'))
+app.use('/api/v1',require('./routes/MovingRoute'))
+app.use('/api/v1',require('./routes/BusinessInformationRoute'))
+app.use('/api/v1',require('./routes/SurveyRoute'))
 
 
 //config other library

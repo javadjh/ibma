@@ -50,18 +50,28 @@ const AdminDashboardRoot = ()=>{
     const adminDashboard = useSelector(state => state.adminDashboard)
     const buildings = useSelector(state => state.adminDashboard.buildings)
     useEffect(()=>{
-
         getAdminDashboardData()
     },[])
 
+    useEffect(()=>{
+        setUserNameSearch(adminDashboard.appSetting?adminDashboard.appSetting.poolTurnsLimit:0)
+        setHomeNumberSearch(adminDashboard.appSetting?adminDashboard.appSetting.payPrice:0)
+        setNotes(adminDashboard.appSetting?adminDashboard.appSetting.notes:"")
+    },[adminDashboard.appSetting])
+
     const getAdminDashboardData = async ()=>{
         await dispatch(getAdminDashboardAction())
+
+        console.log(userNameSearch)
+        console.log(homeNumberSearch)
+        console.log(notes)
     }
 
-    const handleUpdateAppSetting = async (s1,s2)=>{
+    const handleUpdateAppSetting = async ()=>{
         await dispatch(updateAppSetting({
-            poolTurnsLimit:s1,
-            payPrice:s2
+            poolTurnsLimit:userNameSearch,
+            payPrice:homeNumberSearch,
+            notes
         }))
     }
 
@@ -75,13 +85,69 @@ const AdminDashboardRoot = ()=>{
         await dispatch(addBuilding(title))
     }
 
+    const [userNameSearch,setUserNameSearch] = useState(adminDashboard.appSetting?adminDashboard.appSetting.poolTurnsLimit:0)
+    const [homeNumberSearch,setHomeNumberSearch] = useState(adminDashboard.appSetting?adminDashboard.appSetting.payPrice:0)
+    const [notes,setNotes] = useState(adminDashboard.appSetting?adminDashboard.appSetting.notes:"")
     return(
         <Fragment>
             <div className="container-fluid mt--8 text-right">
-                <SearchingComponent firstHint={`محدودیت استخر ${adminDashboard.appSetting.poolTurnsLimit}`}
-                                    secondHint={`نرخ شارژ ${adminDashboard.appSetting.payPrice}`}
-                                    btnTitle={"اعمال ویرایش"}
-                                    onSearching={handleUpdateAppSetting}/>
+                <div className="row mb-3" >
+                    <div className="col">
+                        <div className="card shadow">
+                            <div className="card-header border-0">
+                                <form>
+                                    <div className="pl-lg-4">
+                                        <div className="row">
+                                            <div className="col-lg-6">
+                                                <div className="form-group">
+                                                    <label className="form-control-label" htmlFor="input-username">{`محدودیت استخر ${adminDashboard.appSetting?adminDashboard.appSetting.poolTurnsLimit:0}`}</label>
+                                                    <input type="text" id="input-username"
+                                                           onChange={(e)=>{
+                                                               setUserNameSearch(e.target.value)
+                                                           }}
+                                                           className="form-control form-control-alternative"
+                                                           placeholder={`محدودیت استخر ${adminDashboard.appSetting?adminDashboard.appSetting.poolTurnsLimit:0}`}/>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-6">
+                                                <div className="form-group">
+                                                    <label className="form-control-label" htmlFor="">{`نرخ شارژ ${adminDashboard.appSetting?adminDashboard.appSetting.payPrice:0}`}</label>
+                                                    <input type={`نرخ شارژ ${adminDashboard.appSetting?adminDashboard.appSetting.payPrice:0}`} id="input-number"
+                                                           onChange={(e)=>{
+                                                               setHomeNumberSearch(e.target.value)
+                                                           }}
+                                                           className="form-control form-control-alternative"
+                                                           placeholder={`نرخ شارژ ${adminDashboard.appSetting?adminDashboard.appSetting.payPrice:0}`}/>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-12">
+                                                <div className="form-group">
+                                                    <label className="form-control-label" htmlFor="">نکات تکمیلی افراد تازه ورود</label>
+                                                    <textarea id="input-number"
+                                                           style={{height:100}}
+                                                           onChange={(e)=>{
+                                                               setNotes(e.target.value)
+                                                           }}
+                                                           value={notes}
+                                                           className="form-control form-control-alternative"
+                                                           placeholder={adminDashboard.appSetting?adminDashboard.appSetting.notes:""}/>
+                                                </div>
+                                            </div>
+
+                                            <div className="col-lg-12">
+                                                    <a onClick={()=>{
+                                                        handleUpdateAppSetting(userNameSearch,homeNumberSearch)
+                                                    }} style={{color:"white"}} className="btn btn-sm btn-dark p-3">{"اعمال ویرایش"}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
 
                 <div className="row mb-4">
                     <div className="col">

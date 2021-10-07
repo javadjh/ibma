@@ -1,4 +1,11 @@
-import {deleteUserService, login, singleUserService, upsertUserService, usersService} from "../APIConfig/userService";
+import {
+    deleteUserService,
+    getUsersHomeNumbersService,
+    login,
+    singleUserService,
+    upsertUserService,
+    usersService
+} from "../APIConfig/userService";
 import jsonwebtoken from 'jsonwebtoken';
 import {hideLoading, showLoading} from "react-redux-loading-bar";
 
@@ -17,6 +24,15 @@ export const initUser=(user)=>{
     }
 }
 
-
+export const getUsersHomeNumbers = ()=>{
+    return async (dispatch,getState)=>{
+        await dispatch(showLoading())
+        const {data,status} = await getUsersHomeNumbersService()
+        await dispatch(hideLoading())
+        if(status===200){
+            await dispatch({type:"INIT_HOME_NUMBERS",payload:data})
+        }
+    }
+}
 
 

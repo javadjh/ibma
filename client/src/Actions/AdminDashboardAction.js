@@ -1,4 +1,9 @@
-import {addBuildingService, getAdminDashboardService, updateAppSettingService} from "../APIConfig/dashboardService";
+import {
+    addBuildingService,
+    getAdminDashboardService,
+    getNotesService,
+    updateAppSettingService
+} from "../APIConfig/dashboardService";
 import {hideLoading, showLoading} from "react-redux-loading-bar";
 import {doneToast} from "../utility/ShowToast";
 
@@ -34,6 +39,18 @@ export const addBuilding = (title)=>{
         if(status===200){
             doneToast("با موفقیت ثبت شد")
             await dispatch(getAdminDashboardAction())
+        }
+    }
+}
+
+//user
+export const getNotesAction = ()=>{
+    return async (dispatch,getSate)=>{
+        await dispatch(showLoading())
+        const {data,status} = await getNotesService()
+        await dispatch(hideLoading())
+        if(status===200){
+            dispatch({type:"INIT_NOTES",payload:data})
         }
     }
 }

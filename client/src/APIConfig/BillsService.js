@@ -9,3 +9,7 @@ export const getBillsService=(filter)=>{
 export const upsertBillService=(bill)=>{
     return axiosConfig.post(`${config.baseUrl}${config.upsertBill}`,bill)
 }
+//user
+export const getUsersBillsService=()=>{
+    return axiosConfig.get(`${config.baseUrl}${config.usersBills}`)
+}

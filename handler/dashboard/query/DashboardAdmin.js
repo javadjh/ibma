@@ -4,7 +4,11 @@ const BuildingModel = require("../../../model/BuildingModel");
 const {daysCalculate} = require("../../../utility/dateUtility");
 const {isValidObjectId} = require('mongoose')
 module.exports.adminDashboard = async (req,res)=>{
-    const appSetting = await AppSettingModel.findById("60ddd502df0fe041487135fb").select("-_id -__v" ).lean()
+
+    const appSetting = await AppSettingModel.findOne({
+        buildingId:req.headers.usersbuilding
+    }).select("-_id -__v" ).lean()
+
     if(!isValidObjectId(req.headers.usersbuilding)){
         console.log("first")
         const buildings = await BuildingModel.find({
@@ -35,4 +39,12 @@ module.exports.adminDashboard = async (req,res)=>{
             users
         })
     }
+}
+
+module.exports.notesUsers = async (req,res)=>{
+    let usersNotes = await AppSettingModel.findOne({
+        buildingId:req.headers.usersbuilding
+    }).select("notes").lean()
+
+    res.send(usersNotes)
 }

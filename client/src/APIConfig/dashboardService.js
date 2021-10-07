@@ -13,3 +13,7 @@ export const addBuildingService = (data)=>{
     console.log(data)
     return axiosConfig.post(`${config.baseUrl}${config.insertBuilding}`,data)
 }
+//user
+export const getNotesService = ()=>{
+    return axiosConfig.get(`${config.baseUrl}${config.notesUsers}`)
+}

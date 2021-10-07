@@ -22,6 +22,16 @@ import {ResidentialUnitsReducer} from "./ResidentialUnitsReducer";
 import {ResidentialUnitReducer} from "./ResidentialUnitReducer";
 import {BillsReducer} from "./BillsReducer";
 import {BillReducer} from "./BillReducer";
+import {UserBillsReducer} from "./UserBillsReducer";
+import {NotesReducer} from "./NotesReducer";
+import {HomeNumbersReducer} from "./HomeNumbersReducer";
+import {UsersRebuildingReducer} from "./UsersRebuildingReducer";
+import {UserMovingReducer} from "./UserMovingReducer";
+import {AdminRebuildingReducer} from "./AdminRebuildingReducer";
+import {AdminMovingReducer} from "./AdminMovingReducer";
+import {BusinessInformationReducer} from "./BusinessInformationReducer";
+import {SingleBusinessInformationReducer} from "./SingleBusinessInformation";
+import {SurveysReducer} from "./SurveysReducer";
 
 export const reducersC = combineReducers({
     user:UserReducer,
@@ -47,4 +57,14 @@ export const reducersC = combineReducers({
     residentialUnit:ResidentialUnitReducer,
     bills:BillsReducer,
     bill:BillReducer,
+    userBills:UserBillsReducer,
+    notes:NotesReducer,
+    homeNumbers:HomeNumbersReducer,
+    usersRebuilding:UsersRebuildingReducer,
+    usersMoving:UserMovingReducer,
+    adminRebuilding:AdminRebuildingReducer,
+    adminMoving:AdminMovingReducer,
+    businessInformationAdmin:BusinessInformationReducer,
+    singleBusinessInformation:SingleBusinessInformationReducer,
+    surveys:SurveysReducer
 })

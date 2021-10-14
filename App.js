@@ -69,6 +69,8 @@ app.use('/api/v1',require('./routes/RebuildingRoute'))
 app.use('/api/v1',require('./routes/MovingRoute'))
 app.use('/api/v1',require('./routes/BusinessInformationRoute'))
 app.use('/api/v1',require('./routes/SurveyRoute'))
+app.use('/api/v1',require('./routes/BuyAndSellRoute'))
+app.use('/api/v1',require('./routes/CategoryRoute'))
 
 
 //config other library

@@ -32,6 +32,11 @@ import {AdminMovingReducer} from "./AdminMovingReducer";
 import {BusinessInformationReducer} from "./BusinessInformationReducer";
 import {SingleBusinessInformationReducer} from "./SingleBusinessInformation";
 import {SurveysReducer} from "./SurveysReducer";
+import { UsersSingleSurveyReducer } from "./UsersSingleSurveyReducer";
+import { AdminSurveyReducer } from "./AdminSurveyReducer";
+import {MainCategoryReducer} from "./MainCategoryReducer";
+import {SingleCategoryReducer} from "./SingleCategoryReducer";
+import {BuyAndSellReducer, BuyAndSellsReducer} from "./BuyAndSellsReducer";
 
 export const reducersC = combineReducers({
     user:UserReducer,
@@ -66,5 +71,10 @@ export const reducersC = combineReducers({
     adminMoving:AdminMovingReducer,
     businessInformationAdmin:BusinessInformationReducer,
     singleBusinessInformation:SingleBusinessInformationReducer,
-    surveys:SurveysReducer
+    surveys:SurveysReducer,
+    usersSingleSurvey:UsersSingleSurveyReducer,
+    adminSurvey:AdminSurveyReducer,
+    mainCategory:MainCategoryReducer,
+    singleCategory:SingleCategoryReducer,
+    buyAndSells:BuyAndSellsReducer
 })

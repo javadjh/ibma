@@ -1,6 +1,6 @@
 {
-  "baseUrl": "http://192.168.1.35:1000/api/v1",
-  "ip": "http://192.168.1.35:1000/",
+  "baseUrl": "http://192.168.1.36:1000/api/v1",
+  "ip": "http://192.168.1.36:1000/",
   "login": "/login",
   "users": "/users",
   "upsertUser": "/upsert/user",
@@ -51,5 +51,14 @@
   "getAdminMoving": "/moving",
   "getBusinessInformation": "/business/information",
   "upsertBusinessInformation": "/upsert/business/information",
-  "getAdminSurveys": "/surveys"
+  "getAdminSurveys": "/surveys",
+  "insertSurvey": "/insert/survey",
+  "getUsersSurveys": "/users/surveys",
+  "getUsersSingleSurvey": "/users/survey/",
+  "submitUsersSurvey": "/submit/users/survey",
+  "singleSurveyAdmin": "/survey/",
+  "mainCategory": "/maincategory",
+  "mainsCategory": "/mainscategory/",
+  "insertBuyAndSell": "/insert/buyandsell",
+  "buyAndSells": "/buyandsells"
 }

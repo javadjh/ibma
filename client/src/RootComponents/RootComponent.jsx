@@ -49,6 +49,12 @@ import UpsertUsersBusinessInformation
     from "../components/userSide/userBusinessInformation/UpsertUsersBusinessInformation";
 import SurveyRoot from "../components/survey/SurveyRoot";
 import InsertSurveyComponent from "../components/survey/InsertSurveyComponent";
+import GetAkkUsersSurvey from '../components/userSide/userSurvey/getAllUsersSurvey';
+import SubmitUserSurveyComponent from '../components/userSide/userSurvey/SubmitUserSurveyComponent';
+import SingleSurveyComponent from '../components/survey/SingleSurveyComponent';
+import UserBuyAndSellRoot from "../components/userSide/userBuyAndSell/UserBuyAndSellRoot";
+import InsertUserBuyAndSell from "../components/userSide/userBuyAndSell/InsertUserBuyAndSell";
+import UserMainCategory from "../components/userSide/userCategory/UserMainCategory";
 
 const RootComponent = ({history})=>{
     const containerUserSide = {
@@ -67,7 +73,7 @@ const RootComponent = ({history})=>{
                     "/insert/letter/:id","/pools","/admin","/ads","/insert/ads","/boarddirector","/insert/boarddirector",
                     "/employees","/insert/employee","/contractors","/insert/contractor","/rules","/upsert/rule","/meeting","/insert/meeting",
                     "/gallery/:id","/residential/units","/upsert/residential/unit","/bills","/upsert/bill","/rebuilding",
-                    "/moving","/business/information","/upsert/business/information","/surveys","/insert/survey"]}>
+                    "/moving","/business/information","/upsert/business/information","/surveys","/insert/survey","/survey/:id"]}>
                     {history.location.pathname!=="/adminlogin" ?(
                         <AdminLayout/>
                     ):null}
@@ -131,6 +137,7 @@ const RootComponent = ({history})=>{
 
                                     <Route path={"/surveys"} component={SurveyRoot} exact/>
                                     <Route path={"/insert/survey"} component={InsertSurveyComponent} exact/>
+                                    <Route path={"/survey/:id"} component={SingleSurveyComponent} exact/>
                                 </Switch>
                             </div>
                         </div>
@@ -138,7 +145,8 @@ const RootComponent = ({history})=>{
                 </Route>
                 <Route path={["/","/userlogin","/pooluser","/usersletter","/userpayment","/userlogin",
                     "/useremployee","/userboarddirector","/usercontractor","/userrule","/usergallery",
-                    "userbill","/rebuilding","/userbusinessinformation","/user/upsert/business/information"]}>
+                    "userbill","/rebuilding","/userbusinessinformation","/user/upsert/business/information",
+                    "/usersurvey", "/submitusersurvey","/userbuyandsell","/insertuserbuyandsell","/usermaincategory"]}>
                     <div style={containerUserSide}>
                         <LoadingBar style={{
                             backgroundColor:"black",
@@ -163,6 +171,11 @@ const RootComponent = ({history})=>{
                             <Route path={"/usermoving"} component={UserMovingRoot} exact/>
                             <Route path={"/userbusinessinformation"} component={UserBusinessInformationRoot} exact/>
                             <Route path={"/userupsertbusinessinformation"} component={UpsertUsersBusinessInformation} exact/>
+                            <Route path={"/usersurvey"} component={GetAkkUsersSurvey} exact/>
+                            <Route path={"/submitusersurvey:id"} component={SubmitUserSurveyComponent} exact/>
+                            <Route path={"/userbuyandsell"} component={UserBuyAndSellRoot} exact/>
+                            <Route path={"/insertuserbuyandsell"} component={InsertUserBuyAndSell} exact/>
+                            <Route path={"/usermaincategory"} component={UserMainCategory} exact/>
                         </Switch>
                     </div>
                 </Route>

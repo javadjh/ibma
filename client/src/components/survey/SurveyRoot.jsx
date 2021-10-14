@@ -27,7 +27,7 @@ const SurveyRoot = ({history})=>{
                                 }}>افزودن نظرسنجی جدید</button>
                             </div>
                             {isLoaded?(
-                                <SurveysTable surveys={surveys} />
+                                <SurveysTable surveys={surveys} history={history} />
                             ):null}
 
                         </div>

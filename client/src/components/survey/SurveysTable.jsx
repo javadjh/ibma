@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import config from "../../APIConfig/config.json";
-const SurveysTable = ({surveys})=>{
+const SurveysTable = ({surveys,history})=>{
     console.log(surveys)
     return(
         <div className="table-responsive">
@@ -38,6 +38,7 @@ const SurveysTable = ({surveys})=>{
                         </td>
                         <td>
                             <a onClick={()=>{
+                                history.push(`/survey/${survey._id}`)
                             }} style={{cursor:"pointer",color:"blue"}}>نمایش اطلاعات</a>
                         </td>
 

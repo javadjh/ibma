@@ -249,6 +249,45 @@ const HomePageUser = ({history})=>{
                                 }}>شماره تماس ها</p>
                             </div>
                         </div>
+                        <div >
+                            <div style={setRowContainer}>
+                                <div style={circleBtn}  onClick={()=>{
+                                    history.push("/usersurvey")
+                                }}>
+                                    <img style={imgCircle} src={"./assets/img/shopping-list.png"} />
+                                </div>
+                                <div style={circleBtn} onClick={()=>{
+                                    history.push("/userbuyandsell")
+                                }}>
+                                    <img style={imgCircle} src={"./assets/img/sell.png"} />
+                                </div>
+                                <div style={circleBtn} onClick={()=>{
+                                    history.push("/userbusinessinformation")
+                                }}>
+                                    <img style={imgCircle} src={"./assets/img/telephone.png"} />
+                                </div>
+                            </div>
+
+                            <div style={setRowContainer}>
+                                <p style={{
+                                    fontSize: 12,
+                                    color:"white",
+                                    flex:1,
+                                    marginRight:-10
+                                }}>نظرسنجی</p>
+                                <p style={{
+                                    fontSize: 12,
+                                    flex:1,
+                                    color:"white",
+                                }}>خرید و فروش</p>
+                                <p style={{
+                                    fontSize: 12,
+                                    flex:1,
+                                    color:"white",
+                                    marginLeft:10
+                                }}>شماره تماس ها</p>
+                            </div>
+                        </div>
                     </div>
                 </Fragment>
             ):(

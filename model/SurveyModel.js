@@ -3,9 +3,27 @@ const OptionsSchema = new mongoose.Schema({
     title:{
         type:String,
         required:true
+    },
+    optionId:{
+        type:mongoose.Types.ObjectId,
     }
 })
-
+const AnswerSchema = new mongoose.Schema({
+    title:{
+        type:String,
+        required:true
+    },
+    optionId:{
+        type:OptionsSchema,
+    },
+    optionIds:{
+        type:[OptionsSchema],
+    },
+    userId:{
+        type:mongoose.Types.ObjectId,
+        ref:"user"
+    }
+})
 const SurveySchema = new mongoose.Schema({
     title:{
         minlength:2,
@@ -38,7 +56,7 @@ const SurveySchema = new mongoose.Schema({
         required:true
     },
     answers:{
-        type:[OptionsSchema]
+        type:[AnswerSchema]
     },
     buildingId:{
         required:true,
